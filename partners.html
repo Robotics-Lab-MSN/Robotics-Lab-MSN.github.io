@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  LAB PARTNERS PAGE (partners.html)
+
+  The organizations the lab partners with, as named by Praj
+  (Oct 31, 2026):
+    - LANL
+    - ASM
+    - TSMC
+
+  Praj supplied the names only, so the cards show the names only.
+  No descriptions, logos, or links are invented, and the acronym
+  "ASM" is left exactly as given - it is not expanded to any one
+  organization until Praj confirms which one he means.
+  More partners and details are added as Praj confirms them.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Partners - RAS Lab, ASU</title>
+  <meta name="description" content="The partner organizations of the Robotics Systems Instructional Lab at ASU.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#facilities">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="index.html#isaac-sim">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="index.html#visit">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-inner">
+      <header class="page-header">
+        <p class="section-eyebrow">Partners</p>
+        <h1 class="page-title">Lab partners</h1>
+        <p class="page-lede">
+          The organizations the lab partners with. Details about each
+          partnership are added as they are finalized.
+        </p>
+      </header>
+
+      <!--
+        PARTNER CARDS.
+        One card per partner. Each card carries the partner's name in a
+        large maroon monogram chip (.partner-mark) and nothing else -
+        names only, exactly as Praj gave them.
+      -->
+      <div class="card-grid">
+        <article class="card">
+          <p class="partner-mark">LANL</p>
+          <p class="card-tag">Partner</p>
+        </article>
+        <article class="card">
+          <p class="partner-mark">ASM</p>
+          <p class="card-tag">Partner</p>
+        </article>
+        <article class="card">
+          <p class="partner-mark">TSMC</p>
+          <p class="card-tag">Partner</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Same footer as every page. -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

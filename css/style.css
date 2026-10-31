@@ -792,3 +792,22 @@ body {
   color: var(--muted);
   font-weight: 600;
 }
+
+/* ------------------------------------------------------------------
+   PARTNER MONOGRAM CHIP (partners page)
+   A larger version of the small maroon "RAS" brand mark, used as the
+   visual on each partner card until official partner logos are
+   confirmed. Same palette variables as the rest of the site.
+   ------------------------------------------------------------------ */
+.partner-mark {
+  display: inline-block;              /* shrink-wraps the chip around the letters */
+  background-color: var(--maroon);    /* same maroon as the brand mark */
+  color: #ffffff;                     /* white letters */
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+  font-size: 1.6rem;                  /* bigger than the top-bar mark */
+  font-weight: 700;                   /* bold so the acronym reads at a glance */
+  padding: 0.6rem 1rem;               /* space inside the chip */
+  border-radius: 10px;                /* rounded corners, like the cards */
+  letter-spacing: 0.12em;             /* airy monogram feel */
+  margin-bottom: 0.9rem;              /* space before the tag line under it */
+}
