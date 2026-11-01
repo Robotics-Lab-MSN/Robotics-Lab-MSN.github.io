@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  VISIT PAGE (visit.html)
+
+  Where the lab is. Deliberately says nothing about access rules -
+  visiting arrangements are made through the school. Moved from the
+  home page when Praj asked (Nov 1, 2026) for every top-bar link to
+  open its own page.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit - RAS Lab, ASU</title>
+  <meta name="description" content="Where to find the Robotics Systems Instructional Lab: Room 231, ISTB 12, Arizona State University Polytechnic campus, Mesa, Arizona.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-inner">
+      <header class="page-header">
+        <p class="section-eyebrow">Visit</p>
+        <h1 class="page-title">Location</h1>
+      </header>
+        <p class="section-text">
+          Room 231, ISTB 12 (Interdisciplinary Science and Technology Building 12)<br>
+          Arizona State University, Polytechnic campus<br>
+          Mesa, Arizona
+        </p>
+    </div>
+  </main>
+
+<!--
+    THE FOOTER: the small print at the bottom of every page.
+    js/main.js writes the current year into the span with id="year".
+  -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

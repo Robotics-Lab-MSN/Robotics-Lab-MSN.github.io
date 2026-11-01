@@ -4,9 +4,12 @@
   ROBOTICS SYSTEMS INSTRUCTIONAL LAB - HOME PAGE (index.html)
 
   WHAT THIS FILE IS:
-  The lab's front page. It introduces the lab, its facilities, the
-  teaching that happens in it, and the instructional lab guides that
-  live on this site.
+  The lab's front page: the big opening statement and a directory of
+  what the lab offers. Praj asked (Nov 1, 2026) for every top-bar link
+  to open its own page, so the content sections live on their own
+  pages now: about.html, facilities.html, courses.html, labs.html,
+  people.html, projects.html, partners.html, media.html, alumni.html
+  and visit.html.
 
   HOW TO READ THIS FILE (no experience needed):
   - Text inside an HTML comment marker is a note for humans that
@@ -21,7 +24,7 @@
     1. <head>    - invisible settings: page title, description, links
     2. header    - the bar at the very top with the lab name and menu
     3. hero      - the big opening statement
-    4. sections  - About / Facilities / Teaching / Isaac Sim labs / Visit
+    4. offers    - "What the lab offers": cards linking to the pages above
     5. footer    - the small print at the bottom
 ======================================================================
 -->
@@ -57,16 +60,16 @@
           <span class="menu-button-line"></span>
         </button>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
           <li><a href="courses.html">Courses</a></li>
-          <li><a href="#isaac-sim">Labs</a></li>
+          <li><a href="labs.html">Labs</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="partners.html">Partners</a></li>
           <li><a href="media.html">Media</a></li>
           <li><a href="alumni.html">Alumni</a></li>
-          <li><a class="nav-cta" href="#visit">Visit</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
         </ul>
     </nav>
   </header>
@@ -97,67 +100,15 @@
           logic controllers, and simulation-based instruction.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#facilities">Explore the facilities</a>
-          <a class="button button-ghost" href="#isaac-sim">Instructional labs</a>
+          <a class="button button-primary" href="facilities.html">Explore the facilities</a>
+          <a class="button button-ghost" href="labs.html">Instructional labs</a>
         </div>
       </div>
     </section>
 
-    <!--
-      SECTION 1 - ABOUT.
-      One calm paragraph of orientation: what the lab is, where it sits,
-      and what it is for.
-    -->
-    <section class="section" id="about">
-      <div class="section-inner">
-        <p class="section-eyebrow">01 - About</p>
-        <h2 class="section-title">About the lab</h2>
-        <p class="section-text">
-          The Robotics Systems Instructional Lab is a teaching laboratory in the
-          School of Manufacturing Systems and Networks, part of the Ira A. Fulton
-          Schools of Engineering at Arizona State University. It opened with
-          ISTB 12 - the Interdisciplinary Science and Technology Building on the
-          Polytechnic campus in Mesa, Arizona - in fall 2025.
-        </p>
-        <p class="section-text">
-          The lab supports hands-on instruction in robotics and industrial
-          automation: students program collaborative and industrial robot arms,
-          work with programmable logic controllers (PLCs), and complete guided
-          laboratories in physics-based simulation. Its courses serve the
-          Robotics and Autonomous Systems degree programs.
-        </p>
-
-        <!--
-          LEADERSHIP. The lab's instruction and facilities are built
-          through the leadership of Prof. Sangram Redkar - see the
-          People page for his full profile.
-        -->
-        <h3 class="card-title" style="margin-top: 2rem;">Lab leadership</h3>
-        <p class="section-text">
-          The lab's work is supported and built through the leadership of
-          <a href="https://search.asu.edu/profile/1114748">Prof. Sangram Redkar</a>,
-          Professor and Associate Director in the School of Manufacturing
-          Systems and Networks. Under his direction, his research group and
-          teaching team developed the lab's robot cells, PLC workbenches,
-          and the guided laboratory series published on this site.
-        </p>
-        <img class="leader-photo" src="images/people/sangram-redkar.jpg" alt="Portrait of Prof. Sangram Redkar">
-        <p class="photo-caption">Prof. Sangram Redkar, the lab's faculty lead.</p>
-
-        <img class="section-photo" src="images/pages/about-quadruped.jpg" alt="A quadruped robot walking across the lab floor">
-        <p class="photo-caption">Robots at work in the lab.</p>
-      </div>
-    </section>
-
-    <!--
-      SECTION 2 - WHAT THE LAB OFFERS.
-      The short answer to "what do you have to offer?": courses and
-      training, facilities and equipment, the instructional lab guides,
-      and project work. Each card links to its page or section.
-    -->
     <section class="section" id="offers">
       <div class="section-inner">
-        <p class="section-eyebrow">02 - What the lab offers</p>
+        <p class="section-eyebrow">What the lab offers</p>
         <h2 class="section-title">What the lab offers</h2>
         <p class="section-text">
           The lab is a teaching space first: everything in it exists so
@@ -176,14 +127,14 @@
             <p class="card-tag">Build</p>
             <h3 class="card-title">Facilities and equipment</h3>
             <p class="card-text">Industrial and collaborative robot arms, PLC workbenches, 3D printing, CNC machining, and simulation workstations.</p>
-            <p class="card-link"><a href="#facilities">See the facilities &darr;</a></p>
+            <p class="card-link"><a href="facilities.html">See the facilities &rarr;</a></p>
           </article>
 
           <article class="card">
             <p class="card-tag">Guides</p>
             <h3 class="card-title">Instructional lab guides</h3>
             <p class="card-text">Complete, step-by-step laboratory guides - simulation, articulated robots, and industrial automation.</p>
-            <p class="card-link"><a href="#isaac-sim">Open the lab guides &darr;</a></p>
+            <p class="card-link"><a href="labs.html">Open the lab guides &rarr;</a></p>
           </article>
 
           <article class="card">
@@ -196,312 +147,9 @@
       </div>
     </section>
 
-    <!--
-      SECTION 3 - FACILITIES & EQUIPMENT.
-      A factual list of the equipment families in the room.
-      Only names we know belong here - specifications and photographs are
-      added as they are documented, so nothing below invents details.
-    -->
-    <section class="section section-alt" id="facilities">
-      <div class="section-inner">
-        <p class="section-eyebrow">03 - Facilities</p>
-        <h2 class="section-title">Facilities and equipment</h2>
-        <p class="section-text">
-          Instruction in the lab centers on the same kinds of systems used in
-          modern manufacturing and robotics work:
-        </p>
-
-        <!--
-          One card per equipment family. Cards get a photo only when the
-          lab's photo set shows that exact equipment with certainty -
-          UR5, JAKA, Dobot, and CNC stay text-only until Praj tags which
-          photos show them.
-        -->
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Industrial robots</p>
-            <img class="card-photo" src="images/equipment/fanuc-cells.jpg" alt="Yellow FANUC industrial robot arms inside caged cells in the lab">
-            <h3 class="card-title">FANUC robot arms</h3>
-            <p class="card-text">Industrial robot arms of the kind widely used on production lines, including the FANUC ER-4iA.</p>
-            <p class="card-link"><a href="equipment/fanuc-robot-arms.html">About the FANUC arms &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Collaborative robots</p>
-            <h3 class="card-title">Universal Robots UR5</h3>
-            <p class="card-text">A Universal Robots collaborative robot arm (a "cobot").</p>
-            <p class="card-link"><a href="equipment/universal-robots-ur5.html">About the UR5 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Collaborative robots</p>
-            <h3 class="card-title">JAKA cobots</h3>
-            <p class="card-text">Lightweight collaborative arms used for pick-and-place and assembly exercises.</p>
-            <p class="card-link"><a href="equipment/jaka-cobots.html">About the JAKA cobots &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Desktop robots</p>
-            <h3 class="card-title">Dobot arms</h3>
-            <p class="card-text">Compact desktop robot arms used for introductory programming instruction.</p>
-            <p class="card-link"><a href="equipment/dobot-arms.html">About the Dobot arms &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Industrial automation</p>
-            <img class="card-photo" src="images/equipment/plc-trainer.jpg" alt="A PLC training panel with input and output switches and indicator lights">
-            <h3 class="card-title">Allen-Bradley PLCs</h3>
-            <p class="card-text">Programmable logic controllers - the industrial computers that run automated machinery.</p>
-            <p class="card-link"><a href="equipment/allen-bradley-plcs.html">About the PLCs &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Additive manufacturing</p>
-            <img class="card-photo" src="images/equipment/additive-work.jpg" alt="Additive manufacturing work in the lab">
-            <h3 class="card-title">3D printing</h3>
-            <p class="card-text">Building parts layer by layer - prototypes, fixtures, and structures that cannot be machined.</p>
-            <p class="card-link"><a href="equipment/3d-printing-additive.html">About 3D printing &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Subtractive manufacturing</p>
-            <h3 class="card-title">CNC machining</h3>
-            <p class="card-text">Computer-controlled machining up to 5 axes, with robots tending the machine tools.</p>
-            <p class="card-link"><a href="equipment/cnc-machining.html">About CNC machining &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Simulation</p>
-            <img class="card-photo" src="images/equipment/sim-work.jpg" alt="Robot simulation work in the lab">
-            <h3 class="card-title">NVIDIA Isaac Sim workstations</h3>
-            <p class="card-text">Physics-based robot simulation used for the lab's guided instructional laboratories.</p>
-            <p class="card-link"><a href="equipment/isaac-sim-workstations.html">About the sim workstations &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION 3 - TEACHING.
-      The course taught in the lab and the faculty member who oversees it.
-    -->
-    <section class="section" id="teaching">
-      <div class="section-inner">
-        <p class="section-eyebrow">04 - Teaching</p>
-        <h2 class="section-title">Teaching in the lab</h2>
-        <p class="section-text">
-          The lab's instruction is led by
-          <a href="https://search.asu.edu/profile/1114748">Prof. Sangram Redkar</a>,
-          Professor and Associate Director in the School of Manufacturing
-          Systems and Networks, whose work spans robotics, dynamics and
-          control systems.
-        </p>
-
-        <img class="section-photo" src="images/pages/teaching.jpg" alt="Students working together in the lab with robot cells behind them">
-        <p class="photo-caption">Teaching in the lab.</p>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Course</p>
-            <h3 class="card-title">RAS 545 - Robotic Systems I</h3>
-            <p class="card-text">
-              Graduate coursework in robotic systems, with guided laboratories that
-              move from simulation in NVIDIA Isaac Sim to real robot hardware.
-            </p>
-            <p class="card-link"><a href="#isaac-sim">See the instructional labs &darr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">More</p>
-            <h3 class="card-title">Courses and training</h3>
-            <p class="card-text">
-              The full picture: what is taught in the lab, industry training,
-              and related RAS and manufacturing courses.
-            </p>
-            <p class="card-link"><a href="courses.html">Courses and training &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION 4 - THE ISAAC SIM INSTRUCTIONAL LABS.
-      The lab guides themselves live on this site (the labs/ folder).
-      These were written by lab members for RAS 545; the cards below link
-      to the full step-by-step pages.
-    -->
-    <section class="section section-alt" id="isaac-sim">
-      <div class="section-inner">
-        <p class="section-eyebrow">05 - Instructional labs</p>
-        <h2 class="section-title">Instructional labs in NVIDIA Isaac Sim</h2>
-        <p class="section-text">
-          A guided laboratory series in physics-based robot simulation, written
-          for RAS 545. Each lab is a complete, step-by-step guide with
-          checkpoints and validation steps.
-        </p>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Lab 1</p>
-            <h3 class="card-title">First steps in Isaac Sim</h3>
-            <p class="card-text">Open Isaac Sim, build a small scene with lights and objects, and run a first physics simulation.</p>
-            <p class="card-link"><a href="labs/isaac-sim-lab-1.html">Open Lab 1 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Lab 2</p>
-            <h3 class="card-title">UR5e joint and TCP control</h3>
-            <p class="card-text">Control a six-joint UR5e arm with OmniGraph, GUI inverse kinematics, and Python.</p>
-            <p class="card-link"><a href="labs/isaac-sim-lab-2.html">Open Lab 2 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Lab 3</p>
-            <h3 class="card-title">TurtleBot 3 + ROS 2</h3>
-            <p class="card-text">Give a simulated TurtleBot 3 sensors, localize it, and enable autonomous navigation with Nav2.</p>
-            <p class="card-link"><a href="labs/isaac-sim-lab-3.html">Open Lab 3 &rarr;</a></p>
-          </article>
-        </div>
-
-        <!--
-          Authorship and license: each lab guide page carries its own
-          author and reuse credits in its header. Praj asked (2026-10-30)
-          for no separate credit paragraph here on the home page.
-        -->
-      </div>
-    </section>
-
-
-    <!--
-      SECTION 5 - ARTICULATED ROBOT LABS.
-      The Dobot Magician Lite teaching series, moved over from the
-      authors' originals (linked from tatwik19.github.io/labs).
-      Each card opens the full step-by-step guide on this site.
-    -->
-    <section class="section" id="articulated-robot">
-      <div class="section-inner">
-        <p class="section-eyebrow">06 - Instructional labs</p>
-        <h2 class="section-title">Articulated robot labs</h2>
-        <p class="section-text">
-          A hands-on series on the Dobot Magician Lite desktop arm, written
-          for RAS 545. Students start with safe manual control and end at
-          camera-guided sorting and robot kinematics.
-        </p>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Lab 1</p>
-            <h3 class="card-title">Robot operation and drawing</h3>
-            <p class="card-text">Move the arm safely in X, Y and Z, record its coordinates, and program it to draw letters with Blockly.</p>
-            <p class="card-link"><a href="labs/articulated-robot-lab-1.html">Open Lab 1 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Lab 2</p>
-            <h3 class="card-title">Pick-and-place</h3>
-            <p class="card-text">Pick and place objects with suction-cup and gripper end effectors, programmed in Python.</p>
-            <p class="card-link"><a href="labs/articulated-robot-lab-2.html">Open Lab 2 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Lab 3</p>
-            <h3 class="card-title">Object detection and sorting</h3>
-            <p class="card-text">Detect, classify and sort objects with a camera, then palletize them with the robot.</p>
-            <p class="card-link"><a href="labs/articulated-robot-lab-3.html">Open Lab 3 &rarr;</a></p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Lab 4</p>
-            <h3 class="card-title">Forward and inverse kinematics</h3>
-            <p class="card-text">Work out the arm's forward and inverse kinematics and verify them on the real robot.</p>
-            <p class="card-link"><a href="labs/articulated-robot-lab-4.html">Open Lab 4 &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION 6 - INDUSTRIAL AUTOMATION LABS.
-      A six-lab series on the lab's PLC workcell, from safe wiring up to
-      smart-factory data. The full guides are still being written by the
-      teaching team - the dashed cards are placeholders, not mistakes.
-    -->
-    <section class="section section-alt" id="industrial-automation">
-      <div class="section-inner">
-        <p class="section-eyebrow">07 - Instructional labs</p>
-        <h2 class="section-title">Industrial automation labs</h2>
-        <p class="section-text">
-          Six progressive laboratories covering industrial controllers, PLC
-          programming, automated workcells, HMI and SCADA development,
-          collaborative robots, and smart-factory integration.
-        </p>
-
-        <div class="card-grid">
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 1</p>
-            <h3 class="card-title">Cell power, safety, and network setup</h3>
-            <p class="card-text">Build the workcell foundation: safe 24 VDC power, an E-stop input, an isolated Ethernet network, and a first Modbus TCP exchange with a Micro850 PLC.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 2</p>
-            <h3 class="card-title">PLC programming</h3>
-            <p class="card-text">Develop, test, and troubleshoot PLC programs using Ladder Logic, Structured Text, timers, counters, interlocks, and reusable routines.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 3</p>
-            <h3 class="card-title">Conveyor, sensors, and pneumatics</h3>
-            <p class="card-text">Integrate a conveyor, industrial sensors, and pneumatic actuators into an interlocked automatic material-handling sequence.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 4</p>
-            <h3 class="card-title">HMI and SCADA with Ignition</h3>
-            <p class="card-text">Build an operator interface for commanding, monitoring, alarming, and trending an automated workcell using Ignition and PLC data.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 5</p>
-            <h3 class="card-title">Collaborative robot and PLC integration</h3>
-            <p class="card-text">Integrate a FANUC or Universal Robots platform with a PLC, exchange commands and status, and validate an interlocked workcell sequence.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-
-          <article class="card card-placeholder">
-            <p class="card-tag">Lab 6</p>
-            <h3 class="card-title">Smart factory integration</h3>
-            <p class="card-text">Connect the automated workcell to a smart-manufacturing data layer using MQTT, dashboards, production metrics, and a digital twin of system state.</p>
-            <p class="card-note">Guide in preparation - check back soon.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      SECTION 7 - VISIT.
-      Where the lab is. Deliberately says nothing about access rules -
-      visiting arrangements are made through the school.
-    -->
-    <section class="section" id="visit">
-      <div class="section-inner">
-        <p class="section-eyebrow">08 - Visit</p>
-        <h2 class="section-title">Location</h2>
-        <p class="section-text">
-          Room 231, ISTB 12 (Interdisciplinary Science and Technology Building 12)<br>
-          Arizona State University, Polytechnic campus<br>
-          Mesa, Arizona
-        </p>
-      </div>
-    </section>
-
   </main>
 
-  <!--
+<!--
     THE FOOTER: the small print at the bottom of every page.
     js/main.js writes the current year into the span with id="year".
   -->
