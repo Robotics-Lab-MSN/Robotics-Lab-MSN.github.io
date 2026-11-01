@@ -27,6 +27,7 @@
   <title>People - RAS Lab, ASU</title>
   <meta name="description" content="The faculty, PhD researchers, and lab assistants of the Robotics Systems Instructional Lab at ASU.">
   <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo/ras-robot-logo.svg">
 </head>
 
 <body>
@@ -34,7 +35,72 @@
   <header class="topbar">
     <nav class="topbar-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+        <svg class="brand-logo" role="img" aria-label="Robotics Systems Instructional Lab robot logo" style="width:38px;height:38px;display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <style>
+    .frame { opacity: 0; animation: ras-stopmotion 2.8s linear infinite; }
+    .f1 { animation-delay: 0s; } .f2 { animation-delay: 0.7s; }
+    .f3 { animation-delay: 1.4s; } .f4 { animation-delay: 2.1s; }
+    @keyframes ras-stopmotion { 0% { opacity: 1; } 24.9% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .frame { animation: none; } .f1 { opacity: 1; } }
+  </style>
+       Metallic face + gold antenna carried over unchanged. -->
+       (outlines, pupils, one-eye-smaller expression, smile, antenna).
+       Palette stays the site's: maroon family + gold + paper + ink. -->
+  <defs>
+      <linearGradient id="faceMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"    stop-color="#d4658a"/>
+      <stop offset="0.28" stop-color="#a52c52"/>
+      <stop offset="0.5"  stop-color="#7e1838"/>
+      <stop offset="0.62" stop-color="#8c1d40"/>
+      <stop offset="1"    stop-color="#571028"/>
+    </linearGradient>
+    <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#ffe79a"/>
+      <stop offset="0.5" stop-color="#ffc627"/>
+      <stop offset="1"   stop-color="#c89100"/>
+    </linearGradient>
+    <linearGradient id="stalkMetal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a52c52"/>
+      <stop offset="0.5" stop-color="#6f1732"/>
+      <stop offset="1" stop-color="#a52c52"/>
+    </linearGradient>
+  </defs>
+  <line x1="48" y1="19" x2="48" y2="8" stroke="#6f1732" stroke-width="7" stroke-linecap="round"/>
+  <line x1="48" y1="19" x2="48" y2="8" stroke="url(#stalkMetal)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="48" cy="6.5" r="5.5" fill="url(#goldMetal)" stroke="#6f1732" stroke-width="2"/>
+  <rect x="14" y="18" width="68" height="62" rx="16" ry="16" fill="url(#faceMetal)" stroke="#4a0d20" stroke-width="3"/>
+  <path d="M 22 26 Q 48 18 74 26 Q 48 33 22 26 Z" fill="#ffffff" opacity="0.18"/>
+      <path d="M 31 58 Q 48 80 65 58 Q 48 68 31 58 Z" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+  <g class="frame f1">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="33" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="31.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="57" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="55.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+  <g class="frame f2">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="39" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="37.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="63" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="61.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+  <g class="frame f3">
+      <path d="M 29 44 Q 36 52 43 44" fill="none" stroke="#faf7f2" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 53 44 Q 60 52 67 44" fill="none" stroke="#faf7f2" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <g class="frame f4">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="36" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="34.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="60" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="58.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+</svg>
+ Robotics Systems Instructional Lab
       </a>
       <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
           <span class="menu-button-line"></span>
@@ -69,6 +135,7 @@
       <h2 class="section-title">Faculty</h2>
       <div class="card-grid">
         <article class="card">
+          <img class="person-photo" src="images/people/sangram-redkar.jpg" alt="Portrait of Prof. Sangram Redkar">
           <p class="card-tag">Faculty lead</p>
           <h3 class="card-title">Prof. Sangram Redkar</h3>
           <p class="card-text">
@@ -86,6 +153,7 @@
       <h2 class="section-title">PhD researchers</h2>
       <div class="card-grid">
         <article class="card">
+          <img class="person-photo" src="images/people/tatwik-meesala.jpg" alt="Portrait of Sai Srinivas Tatwik Meesala">
           <p class="card-tag">PhD researcher</p>
           <h3 class="card-title">Sai Srinivas Tatwik Meesala</h3>
           <p class="card-text">
@@ -122,6 +190,7 @@
       <h2 class="section-title">Lab assistants</h2>
       <div class="card-grid">
         <article class="card">
+          <img class="person-photo" src="images/people/prajval-arora.jpg" alt="Portrait of Prajval Arora">
           <p class="card-tag">Lab assistant</p>
           <h3 class="card-title">Prajval Arora</h3>
           <p class="card-text">
@@ -140,7 +209,6 @@
           </ul>
           <p class="card-link"><a href="https://www.prajvalarora.com">Portfolio &rarr;</a></p>
         </article>
-
         <article class="card">
           <p class="card-tag">Lab assistant</p>
           <h3 class="card-title">Akshan Bhelkar</h3>
@@ -150,7 +218,32 @@
           </p>
           <p class="card-link"><a href="https://www.linkedin.com/in/akshanbhelkar/">LinkedIn &rarr;</a></p>
         </article>
-
+        <article class="card">
+          <p class="card-tag">Lab assistant</p>
+          <h3 class="card-title">Nick Nekrasov</h3>
+          <p class="card-text">
+            Lab assistant in the Robotics Systems Instructional Lab,
+            supporting the lab's courses and training.
+          </p>
+          <p class="card-link"><a href="https://www.linkedin.com/in/nick-nekrasov5">LinkedIn &rarr;</a></p>
+        </article>
+          <article class="card">
+          <p class="card-tag">Lab assistant</p>
+          <h3 class="card-title">Kaushik Gunasekaren</h3>
+          <p class="card-text">
+            Lab assistant in the Robotics Systems Instructional Lab.
+          </p>
+        </article>
+        <article class="card">
+          <p class="card-tag">Lab assistant</p>
+          <h3 class="card-title">Ela Chachulski</h3>
+          <p class="card-text">
+            Lab assistant in the Robotics Systems Instructional Lab and a
+            Robotics and Autonomous Systems Engineering student at ASU,
+            supporting the lab's courses and training.
+          </p>
+          <p class="card-link"><a href="https://www.linkedin.com/in/elachachulski">LinkedIn &rarr;</a></p>
+        </article>
         <article class="card">
           <p class="card-tag">Lab assistant</p>
           <h3 class="card-title">Sara Doyle</h3>
@@ -162,26 +255,9 @@
           <p class="card-link"><a href="https://www.linkedin.com/in/sara-doyle-285458382">LinkedIn &rarr;</a></p>
         </article>
 
-        <article class="card">
-          <p class="card-tag">Lab assistant</p>
-          <h3 class="card-title">Ela Chachulski</h3>
-          <p class="card-text">
-            Lab assistant in the Robotics Systems Instructional Lab and a
-            Robotics and Autonomous Systems Engineering student at ASU,
-            supporting the lab's courses and training.
-          </p>
-          <p class="card-link"><a href="https://www.linkedin.com/in/elachachulski">LinkedIn &rarr;</a></p>
-        </article>
 
-        <article class="card">
-          <p class="card-tag">Lab assistant</p>
-          <h3 class="card-title">Nick Nekrasov</h3>
-          <p class="card-text">
-            Lab assistant in the Robotics Systems Instructional Lab,
-            supporting the lab's courses and training.
-          </p>
-          <p class="card-link"><a href="https://www.linkedin.com/in/nick-nekrasov5">LinkedIn &rarr;</a></p>
-        </article>
+
+
       </div>
 
     </div>
@@ -191,7 +267,8 @@
     <div class="footer-inner">
       <p class="footer-line">Robotics Systems Instructional Lab (RAS Lab) - Arizona State University</p>
       <p class="footer-line footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
-    </div>
+          <p class="footer-small">&copy; <span id="copy-year">2026</span> Robotics Systems Instructional Lab, Arizona State University. Company and organization logos are the property of their respective owners.</p>
+</div>
   </footer>
 
   <script src="js/main.js"></script>
