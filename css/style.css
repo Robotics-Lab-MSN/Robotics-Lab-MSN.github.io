@@ -811,3 +811,9 @@ body {
   letter-spacing: 0.12em;             /* airy monogram feel */
   margin-bottom: 0.9rem;              /* space before the tag line under it */
 }
+
+/* Anchor targets inside a page (the lab series titles on labs.html)
+   land just below the sticky top bar instead of hiding under it. */
+.section-inner h2[id] {
+  scroll-margin-top: 5rem;  /* a little more than the top bar's height */
+}

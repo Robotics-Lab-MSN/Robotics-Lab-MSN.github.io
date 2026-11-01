@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  FACILITIES PAGE (facilities.html)
+
+  The lab's equipment families, one card each, linking to the detail
+  pages in the equipment/ folder. Moved from the home page when Praj
+  asked (Nov 1, 2026) for every top-bar link to open its own page.
+  Cards get a photo only when the lab's photo set shows that exact
+  equipment with certainty - UR5, JAKA, Dobot, and CNC stay text-only
+  until Praj tags which photos show them.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities & Equipment - RAS Lab, ASU</title>
+  <meta name="description" content="The facilities and equipment of the Robotics Systems Instructional Lab at ASU: industrial and collaborative robot arms, PLCs, 3D printing, CNC machining, and simulation workstations.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-inner">
+      <header class="page-header">
+        <p class="section-eyebrow">Facilities &amp; equipment</p>
+        <h1 class="page-title">Facilities and equipment</h1>
+      </header>
+        <p class="section-text">
+          Instruction in the lab centers on the same kinds of systems used in
+          modern manufacturing and robotics work:
+        </p>
+
+        <!--
+          One card per equipment family. Cards get a photo only when the
+          lab's photo set shows that exact equipment with certainty -
+          UR5, JAKA, Dobot, and CNC stay text-only until Praj tags which
+          photos show them.
+        -->
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Industrial robots</p>
+            <img class="card-photo" src="images/equipment/fanuc-cells.jpg" alt="Yellow FANUC industrial robot arms inside caged cells in the lab">
+            <h3 class="card-title">FANUC robot arms</h3>
+            <p class="card-text">Industrial robot arms of the kind widely used on production lines, including the FANUC ER-4iA.</p>
+            <p class="card-link"><a href="equipment/fanuc-robot-arms.html">About the FANUC arms &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Collaborative robots</p>
+            <h3 class="card-title">Universal Robots UR5</h3>
+            <p class="card-text">A Universal Robots collaborative robot arm (a "cobot").</p>
+            <p class="card-link"><a href="equipment/universal-robots-ur5.html">About the UR5 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Collaborative robots</p>
+            <h3 class="card-title">JAKA cobots</h3>
+            <p class="card-text">Lightweight collaborative arms used for pick-and-place and assembly exercises.</p>
+            <p class="card-link"><a href="equipment/jaka-cobots.html">About the JAKA cobots &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Desktop robots</p>
+            <h3 class="card-title">Dobot arms</h3>
+            <p class="card-text">Compact desktop robot arms used for introductory programming instruction.</p>
+            <p class="card-link"><a href="equipment/dobot-arms.html">About the Dobot arms &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Industrial automation</p>
+            <img class="card-photo" src="images/equipment/plc-trainer.jpg" alt="A PLC training panel with input and output switches and indicator lights">
+            <h3 class="card-title">Allen-Bradley PLCs</h3>
+            <p class="card-text">Programmable logic controllers - the industrial computers that run automated machinery.</p>
+            <p class="card-link"><a href="equipment/allen-bradley-plcs.html">About the PLCs &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Additive manufacturing</p>
+            <img class="card-photo" src="images/equipment/additive-work.jpg" alt="Additive manufacturing work in the lab">
+            <h3 class="card-title">3D printing</h3>
+            <p class="card-text">Building parts layer by layer - prototypes, fixtures, and structures that cannot be machined.</p>
+            <p class="card-link"><a href="equipment/3d-printing-additive.html">About 3D printing &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Subtractive manufacturing</p>
+            <h3 class="card-title">CNC machining</h3>
+            <p class="card-text">Computer-controlled machining up to 5 axes, with robots tending the machine tools.</p>
+            <p class="card-link"><a href="equipment/cnc-machining.html">About CNC machining &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Simulation</p>
+            <img class="card-photo" src="images/equipment/sim-work.jpg" alt="Robot simulation work in the lab">
+            <h3 class="card-title">NVIDIA Isaac Sim workstations</h3>
+            <p class="card-text">Physics-based robot simulation used for the lab's guided instructional laboratories.</p>
+            <p class="card-link"><a href="equipment/isaac-sim-workstations.html">About the sim workstations &rarr;</a></p>
+          </article>
+        </div>
+    </div>
+  </main>
+
+<!--
+    THE FOOTER: the small print at the bottom of every page.
+    js/main.js writes the current year into the span with id="year".
+  -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

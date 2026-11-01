@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  ABOUT PAGE (about.html)
+
+  What the lab is, who leads it, and the teaching that happens in it.
+  This content used to be the About and Teaching sections of the home
+  page; Praj asked (Nov 1, 2026) for every top-bar link to open its
+  own page, so it lives here now.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - RAS Lab, ASU</title>
+  <meta name="description" content="About the Robotics Systems Instructional Lab at Arizona State University: what it is, its leadership, and the teaching it supports.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-inner">
+      <header class="page-header">
+        <p class="section-eyebrow">About</p>
+        <h1 class="page-title">About the lab</h1>
+      </header>
+        <p class="section-text">
+          The Robotics Systems Instructional Lab is a teaching laboratory in the
+          School of Manufacturing Systems and Networks, part of the Ira A. Fulton
+          Schools of Engineering at Arizona State University. It opened with
+          ISTB 12 - the Interdisciplinary Science and Technology Building on the
+          Polytechnic campus in Mesa, Arizona - in fall 2025.
+        </p>
+        <p class="section-text">
+          The lab supports hands-on instruction in robotics and industrial
+          automation: students program collaborative and industrial robot arms,
+          work with programmable logic controllers (PLCs), and complete guided
+          laboratories in physics-based simulation. Its courses serve the
+          Robotics and Autonomous Systems degree programs.
+        </p>
+
+        <!--
+          LEADERSHIP. The lab's instruction and facilities are built
+          through the leadership of Prof. Sangram Redkar - see the
+          People page for his full profile.
+        -->
+        <h3 class="card-title" style="margin-top: 2rem;">Lab leadership</h3>
+        <p class="section-text">
+          The lab's work is supported and built through the leadership of
+          <a href="https://search.asu.edu/profile/1114748">Prof. Sangram Redkar</a>,
+          Professor and Associate Director in the School of Manufacturing
+          Systems and Networks. Under his direction, his research group and
+          teaching team developed the lab's robot cells, PLC workbenches,
+          and the guided laboratory series published on this site.
+        </p>
+        <img class="leader-photo" src="images/people/sangram-redkar.jpg" alt="Portrait of Prof. Sangram Redkar">
+        <p class="photo-caption">Prof. Sangram Redkar, the lab's faculty lead.</p>
+
+        <img class="section-photo" src="images/pages/about-quadruped.jpg" alt="A quadruped robot walking across the lab floor">
+        <p class="photo-caption">Robots at work in the lab.</p>
+
+      <!-- The teaching that happens in the lab (moved from the home page). -->
+
+        <h2 class="section-title">Teaching in the lab</h2>
+        <p class="section-text">
+          The lab's instruction is led by
+          <a href="https://search.asu.edu/profile/1114748">Prof. Sangram Redkar</a>,
+          Professor and Associate Director in the School of Manufacturing
+          Systems and Networks, whose work spans robotics, dynamics and
+          control systems.
+        </p>
+
+        <img class="section-photo" src="images/pages/teaching.jpg" alt="Students working together in the lab with robot cells behind them">
+        <p class="photo-caption">Teaching in the lab.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Course</p>
+            <h3 class="card-title">RAS 545 - Robotic Systems I</h3>
+            <p class="card-text">
+              Graduate coursework in robotic systems, with guided laboratories that
+              move from simulation in NVIDIA Isaac Sim to real robot hardware.
+            </p>
+            <p class="card-link"><a href="labs.html">See the instructional labs &darr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">More</p>
+            <h3 class="card-title">Courses and training</h3>
+            <p class="card-text">
+              The full picture: what is taught in the lab, industry training,
+              and related RAS and manufacturing courses.
+            </p>
+            <p class="card-link"><a href="courses.html">Courses and training &rarr;</a></p>
+          </article>
+        </div>
+    </div>
+  </main>
+
+<!--
+    THE FOOTER: the small print at the bottom of every page.
+    js/main.js writes the current year into the span with id="year".
+  -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>
