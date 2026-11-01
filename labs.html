@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  INSTRUCTIONAL LABS PAGE (labs.html)
+
+  The guided laboratory series written for RAS 545: the NVIDIA Isaac
+  Sim labs, the articulated robot (Dobot) labs, and the industrial
+  automation labs. The full step-by-step guides live in the labs/
+  folder; the dashed cards are placeholders for guides the teaching
+  team is still writing. Moved from the home page when Praj asked
+  (Nov 1, 2026) for every top-bar link to open its own page.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructional Labs - RAS Lab, ASU</title>
+  <meta name="description" content="The instructional laboratory guides of the Robotics Systems Instructional Lab at ASU: NVIDIA Isaac Sim, articulated robots, and industrial automation.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">RAS</span> Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-inner">
+      <header class="page-header">
+        <p class="section-eyebrow">Instructional labs</p>
+        <h1 class="page-title">Instructional labs</h1>
+        <p class="page-lede">Complete, step-by-step laboratory guides written for RAS 545 - simulation, articulated robots, and industrial automation.</p>
+      </header>
+        <h2 class="section-title" id="isaac-sim">Instructional labs in NVIDIA Isaac Sim</h2>
+        <p class="section-text">
+          A guided laboratory series in physics-based robot simulation, written
+          for RAS 545. Each lab is a complete, step-by-step guide with
+          checkpoints and validation steps.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Lab 1</p>
+            <h3 class="card-title">First steps in Isaac Sim</h3>
+            <p class="card-text">Open Isaac Sim, build a small scene with lights and objects, and run a first physics simulation.</p>
+            <p class="card-link"><a href="labs/isaac-sim-lab-1.html">Open Lab 1 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 2</p>
+            <h3 class="card-title">UR5e joint and TCP control</h3>
+            <p class="card-text">Control a six-joint UR5e arm with OmniGraph, GUI inverse kinematics, and Python.</p>
+            <p class="card-link"><a href="labs/isaac-sim-lab-2.html">Open Lab 2 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 3</p>
+            <h3 class="card-title">TurtleBot 3 + ROS 2</h3>
+            <p class="card-text">Give a simulated TurtleBot 3 sensors, localize it, and enable autonomous navigation with Nav2.</p>
+            <p class="card-link"><a href="labs/isaac-sim-lab-3.html">Open Lab 3 &rarr;</a></p>
+          </article>
+        </div>
+
+        <!--
+          Authorship and license: each lab guide page carries its own
+          author and reuse credits in its header. Praj asked (2026-10-30)
+          for no separate credit paragraph here on the home page.
+        -->
+
+      <!-- The Dobot Magician Lite teaching series. -->
+
+        <h2 class="section-title" id="articulated-robot">Articulated robot labs</h2>
+        <p class="section-text">
+          A hands-on series on the Dobot Magician Lite desktop arm, written
+          for RAS 545. Students start with safe manual control and end at
+          camera-guided sorting and robot kinematics.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Lab 1</p>
+            <h3 class="card-title">Robot operation and drawing</h3>
+            <p class="card-text">Move the arm safely in X, Y and Z, record its coordinates, and program it to draw letters with Blockly.</p>
+            <p class="card-link"><a href="labs/articulated-robot-lab-1.html">Open Lab 1 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 2</p>
+            <h3 class="card-title">Pick-and-place</h3>
+            <p class="card-text">Pick and place objects with suction-cup and gripper end effectors, programmed in Python.</p>
+            <p class="card-link"><a href="labs/articulated-robot-lab-2.html">Open Lab 2 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 3</p>
+            <h3 class="card-title">Object detection and sorting</h3>
+            <p class="card-text">Detect, classify and sort objects with a camera, then palletize them with the robot.</p>
+            <p class="card-link"><a href="labs/articulated-robot-lab-3.html">Open Lab 3 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 4</p>
+            <h3 class="card-title">Forward and inverse kinematics</h3>
+            <p class="card-text">Work out the arm's forward and inverse kinematics and verify them on the real robot.</p>
+            <p class="card-link"><a href="labs/articulated-robot-lab-4.html">Open Lab 4 &rarr;</a></p>
+          </article>
+        </div>
+
+      <!-- The PLC workcell series (guides still in preparation). -->
+
+        <h2 class="section-title" id="industrial-automation">Industrial automation labs</h2>
+        <p class="section-text">
+          Six progressive laboratories covering industrial controllers, PLC
+          programming, automated workcells, HMI and SCADA development,
+          collaborative robots, and smart-factory integration.
+        </p>
+
+        <div class="card-grid">
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 1</p>
+            <h3 class="card-title">Cell power, safety, and network setup</h3>
+            <p class="card-text">Build the workcell foundation: safe 24 VDC power, an E-stop input, an isolated Ethernet network, and a first Modbus TCP exchange with a Micro850 PLC.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 2</p>
+            <h3 class="card-title">PLC programming</h3>
+            <p class="card-text">Develop, test, and troubleshoot PLC programs using Ladder Logic, Structured Text, timers, counters, interlocks, and reusable routines.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 3</p>
+            <h3 class="card-title">Conveyor, sensors, and pneumatics</h3>
+            <p class="card-text">Integrate a conveyor, industrial sensors, and pneumatic actuators into an interlocked automatic material-handling sequence.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 4</p>
+            <h3 class="card-title">HMI and SCADA with Ignition</h3>
+            <p class="card-text">Build an operator interface for commanding, monitoring, alarming, and trending an automated workcell using Ignition and PLC data.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 5</p>
+            <h3 class="card-title">Collaborative robot and PLC integration</h3>
+            <p class="card-text">Integrate a FANUC or Universal Robots platform with a PLC, exchange commands and status, and validate an interlocked workcell sequence.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+
+          <article class="card card-placeholder">
+            <p class="card-tag">Lab 6</p>
+            <h3 class="card-title">Smart factory integration</h3>
+            <p class="card-text">Connect the automated workcell to a smart-manufacturing data layer using MQTT, dashboards, production metrics, and a digital twin of system state.</p>
+            <p class="card-note">Guide in preparation - check back soon.</p>
+          </article>
+        </div>
+    </div>
+  </main>
+
+<!--
+    THE FOOTER: the small print at the bottom of every page.
+    js/main.js writes the current year into the span with id="year".
+  -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>
