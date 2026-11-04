@@ -614,7 +614,7 @@ body {
      the articulated-robot lab documents go one level deeper.
    - The rotating hero background photos (the "company landing page"
      look Praj asked for). Nothing shows until real photos of the lab
-     are placed in images/hero/ and listed in js/main.js.
+     are placed in assets/hero/ and listed in js/main.js.
    ------------------------------------------------------------------ */
 
 .prose h4 {

@@ -18,7 +18,7 @@ tiny bit of JavaScript. No frameworks, no build tools, no packages to install.
 | `courses.html`      | Courses and training taught in the lab | the syllabus |
 | `people.html`       | Faculty, TAs, and researchers | the staff board |
 | `projects.html`     | Ongoing lab projects | the project wall |
-| `images/`           | Photos of the lab and its equipment | the photo album |
+| `assets/`           | All pictures: lab and equipment photos, people, partner logos, and the lab guide figures (`assets/lab-guides/`) | the photo album |
 | `css/style.css`     | How everything looks | the paint |
 | `js/main.js`        | Small movements (mobile menu, footer year) | the muscles |
 
@@ -64,14 +64,14 @@ equipment is and which labs use it, and links back to the matching guides.
 ## The hero photos
 
 The home page shows large rotating photos of the lab behind the headline
-(company landing-page style). The photos live in `images/hero/` and the
+(company landing-page style). The photos live in `assets/hero/` and the
 `HERO_PHOTOS` list at the bottom of `js/main.js` names them in rotation
 order; the hero crossfades every 6 seconds. To change the set, swap files
-in `images/hero/` and edit that one list.
+in `assets/hero/` and edit that one list.
 
 The first set came from Praj's lab photo folder (selected 2026-10-30).
-Equipment and page photos work the same way: files in `images/equipment/`
-and `images/pages/`, referenced from the matching page. Some equipment
+Equipment and page photos work the same way: files in `assets/equipment/`
+and `assets/pages/`, referenced from the matching page. Some equipment
 pages still wait for their photo - they carry a `TODO(Praj)` comment.
 
 ## How publishing works
