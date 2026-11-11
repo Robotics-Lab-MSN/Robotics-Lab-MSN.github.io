@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  RAS 545 - MIDTERM 1 (labs/ras-545-midterm-1-tic-tac-toe.html)
+
+  WHAT THIS PAGE IS:
+  The full text of RAS 545 - Midterm 1: Camera-Assisted Tic-Tac-Toe Robot, hosted on the lab site.
+  Praj asked (voice note, 2026-11-09) for the RAS 545 assessment
+  briefs to live here as their own pages instead of linking out.
+
+  WHERE THE CONTENT CAME FROM:
+  Source page: https://tatwik19.github.io/labs/midterm-01-tic-tac-toe/ on Sai
+  Srinivas Tatwik Meesala's course site. Note on rights: his repo's
+  LICENSE file is the website theme's MIT license (copyright Michael
+  Rose), not a license on his written content, so this page credits
+  him and links the original rather than claiming a license.
+  Downloadable attachments (PDF / starter code) are copied into
+  assets/labs/ so the links keep working here. The instructor's
+  name follows the site-wide style: Dr. Sangram Redkar.
+
+  HOW TO EDIT:
+  The assessment text sits inside the <div class="prose"> below.
+  Everything outside that div (header, credits, styling hooks) is
+  ordinary site code with comments, same as the lab guide pages.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera-Assisted Tic-Tac-Toe Robot - RAS Lab, ASU</title>
+  <meta name="description" content="Midterm 1 for RAS 545: integrate robot drawing, camera-based board perception, game logic, and motion control into a robotic tic-tac-toe opponent.">
+
+  <!-- The same paint as the rest of the site (one folder up). -->
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/ras-robot-logo.svg">
+</head>
+
+<body>
+  <main>
+    <div class="section-inner">
+
+      <!-- Back to the main directory page. -->
+      <a class="back-link" href="../labs.html#ras-545-assessments">&larr; Back to the lab directory</a>
+
+      <!-- The title block: what this is, who it is for, where it came from. -->
+      <header class="lab-header">
+        <p class="section-eyebrow">RAS 545 - Midterm 1</p>
+        <h1>Camera-Assisted Tic-Tac-Toe Robot</h1>
+        <p class="lab-meta">
+          Course: RAS 545 - Robotics Systems I &middot; Instructor: Dr. Sangram Redkar<br>
+          From Sai Srinivas Tatwik Meesala's RAS 545 course materials;
+          original at
+          <a href="https://tatwik19.github.io/labs/midterm-01-tic-tac-toe/">tatwik19.github.io/labs/midterm-01-tic-tac-toe</a>.
+        </p>
+      </header>
+
+      <!--
+        THE ASSESSMENT BRIEF ITSELF (converted from the source page).
+        Long reading text - the ".prose" styles in css/style.css give it
+        roomy headings, dark code blocks and images that fit the screen.
+      -->
+      <div class="prose">
+<p><strong>Instructor:</strong> Dr. <a href="mailto:Sangram.Redkar@asu.edu">Sangram Redkar</a></p><blockquote><p><strong>Source materials:</strong> <a href="../assets/labs/midterm-1-assignment.pdf">Assignment overview</a> · <a href="../assets/labs/midterm-1-specification.pdf">Original project specification</a></p></blockquote><h2 id="assessment-overview">Assessment Overview</h2><p>This midterm integrates perception, reasoning, and physical robot motion in a human-robot Tic-Tac-Toe game. The robot creates the board, observes the evolving game state, selects a valid move, and draws its mark in the corresponding cell. The human plays first and may choose either X or O; the robot uses the remaining mark.</p><p>The assessment emphasizes complete system behavior rather than an isolated algorithm: camera observations must be interpreted in board coordinates, game logic must maintain a consistent state, and the resulting decision must be converted into safe robot motion.</p><h2 id="functional-workflow">Functional Workflow</h2><pre class="text"><code>Draw the 3 × 3 board
+        ↓
+Observe the human move
+        ↓
+Detect and classify occupied cells
+        ↓
+Update the game state
+        ↓
+Select a legal robot move
+        ↓
+Map the selected cell to robot coordinates
+        ↓
+Draw the robot mark
+        ↓
+Detect a human win, robot win, draw, or next turn
+</code></pre><h2 id="core-requirements">Core Requirements</h2><ul><li>Generate a repeatable 3 × 3 game grid with the robot.</li><li>Allow the human player to move first and choose either X or O; assign the opposite mark to the robot.</li><li>Detect the human move and associate it with the correct board cell.</li><li>Maintain the board state across alternating turns.</li><li>Select legal robot moves using minimax or another suitable strategy. Rule-based, MATLAB, GitHub-sourced, and generative-AI-assisted implementations are permitted.</li><li>Draw the robot mark inside the selected cell.</li><li>Detect both human and robot wins.</li><li>Detect a full-board draw and command the robot to draw <strong>D</strong> beside the grid.</li><li>Prevent overwriting an occupied cell.</li><li>Maintain approximately <strong>1–2 cm of vertical clearance</strong> above the drawing surface during travel motions between strokes and grid cells.</li></ul><h2 id="technical-components">Technical Components</h2><table><thead><tr><th>Component</th><th>Purpose</th></tr></thead><tbody><tr><td>Board calibration</td><td>Relate image-space cells to physical robot coordinates.</td></tr><tr><td>Visual perception</td><td>Detect the grid and classify human and robot marks.</td></tr><tr><td>Game-state model</td><td>Track occupancy, active player, legal moves, wins, and draws.</td></tr><tr><td>Decision engine</td><td>Select the next robot move from the current state.</td></tr><tr><td>Motion generation</td><td>Convert a board-cell decision into a repeatable drawing trajectory.</td></tr><tr><td>Safety logic</td><td>Maintain approximately 1–2 cm of vertical clearance during travel motions and controlled contact with the drawing surface.</td></tr></tbody></table><h2 id="demonstration-policy">Demonstration Policy</h2><ul><li>The complete project setup must be assembled, calibrated, powered, and ready to run <strong>before the TA or grader is called</strong>.</li><li>Each project is limited to a maximum of <strong>two official demonstration attempts</strong>.</li></ul><h2 id="deliverables-and-grading">Deliverables and Grading</h2><table><thead><tr><th>Assessment</th><th style="text-align: right">Points</th></tr></thead><tbody><tr><td>Core project: program the robot to play Tic-Tac-Toe against a human</td><td style="text-align: right"><strong>10</strong></td></tr><tr><td>Bonus 1: selectable first player and mark</td><td style="text-align: right"><strong>+5</strong></td></tr><tr><td>Bonus 2: consecutive-human-turn edge-case detection</td><td style="text-align: right"><strong>+5</strong></td></tr><tr><td>Bonus 3: robot-versus-robot game</td><td style="text-align: right"><strong>+5</strong></td></tr><tr><td><strong>Maximum available</strong></td><td style="text-align: right"><strong>25</strong></td></tr></tbody></table><h3 id="core-project--10-points">Core Project — 10 points</h3><p>Program the robot to draw the grid and play a complete game against a human. The human moves first and selects X or O. The robot must use the opposite mark, recognize each move, select legal responses, detect a win by either player, and identify a draw by writing <strong>D</strong> beside the grid.</p><h3 id="bonus-1--5-points">Bonus 1 — 5 points</h3><p>Support configurable game setup. The system must ask whether the human or robot moves first and allow selection of X or O.</p><h3 id="bonus-2--5-points">Bonus 2 — 5 points</h3><p>Handle the edge case in which the human takes two consecutive turns before the robot responds. The robot must identify the invalid turn sequence and draw <strong>E</strong> beside the grid.</p><h3 id="bonus-3--5-points">Bonus 3 — 5 points</h3><p>Demonstrate a robot-versus-robot Tic-Tac-Toe game completed by two teams.</p><h2 id="example-demonstration">Example Demonstration</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/Gvnxh9V4Tv8" title="Robot playing Tic-Tac-Toe" loading="lazy" style="width: 100%; max-width: 44rem; aspect-ratio: 16 / 9; height: auto; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe><h2 id="presentation-resources">Presentation Resources</h2><ul><li><a href="https://youtu.be/HTXOMVjY4V4">Sample video presentation</a></li><li><a href="https://www.linkedin.com/showcase/school-of-manufacturing-systems-and-networks/">ASU School of Manufacturing Systems and Networks</a></li></ul><h2 id="completion-criteria">Completion Criteria</h2><ul class="task-list"><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />The robot draws a consistent game grid.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Camera observations are mapped to the correct board cells.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Human and robot marks are represented correctly in the internal game state.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />The robot selects only legal moves.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Drawing trajectories remain within the selected cells.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Travel motions maintain approximately 1–2 cm of vertical clearance above the drawing surface.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Human-win and robot-win conditions terminate the game correctly.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />A draw terminates the game and causes the robot to write <strong>D</strong> beside the grid.</li></ul>
+      </div>
+    </div>
+  </main>
+
+<!--
+    THE FOOTER: the small print at the bottom of every page.
+    js/main.js writes the current year into the span with id="year".
+  -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+<p class="footer-small">&copy; 2026 Robotics Systems Instructional Lab</p>
+<p class="footer-small">Company and organization logos on this site are the property of their respective owners.</p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
