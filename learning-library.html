@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  INSTRUCTIONAL LABS PAGE (labs.html)
+
+  The guided laboratory series written for RAS 545: the NVIDIA Isaac
+  Sim labs, the articulated robot (Dobot) labs, and the industrial
+  automation labs. The full step-by-step guides live in the labs/
+  folder; the dashed cards are placeholders for guides the teaching
+  team is still writing. Moved from the home page when Praj asked
+  (Nov 1, 2026) for every top-bar link to open its own page.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Library - RAS Lab, ASU</title>
+  <meta name="description" content="Open learning guides for robot simulation, articulated robots, digital twins and industrial workcells.">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo/ras-robot-logo.svg">
+  <link rel="stylesheet" href="assets/learning-library/library.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-logo" role="img" aria-label="Robotics Systems Instructional Lab robot logo" style="width:38px;height:38px;display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <style>
+    .frame { opacity: 0; animation: ras-stopmotion 2.8s linear infinite; }
+    .f1 { animation-delay: 0s; } .f2 { animation-delay: 0.7s; }
+    .f3 { animation-delay: 1.4s; } .f4 { animation-delay: 2.1s; }
+    @keyframes ras-stopmotion { 0% { opacity: 1; } 24.9% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .frame { animation: none; } .f1 { opacity: 1; } }
+  </style>
+       Metallic face + gold antenna carried over unchanged. -->
+       (outlines, pupils, one-eye-smaller expression, smile, antenna).
+       Palette stays the site's: maroon family + gold + paper + ink. -->
+  <defs>
+      <linearGradient id="faceMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"    stop-color="#d4658a"/>
+      <stop offset="0.28" stop-color="#a52c52"/>
+      <stop offset="0.5"  stop-color="#7e1838"/>
+      <stop offset="0.62" stop-color="#8c1d40"/>
+      <stop offset="1"    stop-color="#571028"/>
+    </linearGradient>
+    <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#ffe79a"/>
+      <stop offset="0.5" stop-color="#ffc627"/>
+      <stop offset="1"   stop-color="#c89100"/>
+    </linearGradient>
+    <linearGradient id="stalkMetal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a52c52"/>
+      <stop offset="0.5" stop-color="#6f1732"/>
+      <stop offset="1" stop-color="#a52c52"/>
+    </linearGradient>
+  </defs>
+  <line x1="48" y1="19" x2="48" y2="8" stroke="#6f1732" stroke-width="7" stroke-linecap="round"/>
+  <line x1="48" y1="19" x2="48" y2="8" stroke="url(#stalkMetal)" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="48" cy="6.5" r="5.5" fill="url(#goldMetal)" stroke="#6f1732" stroke-width="2"/>
+  <rect x="14" y="18" width="68" height="62" rx="16" ry="16" fill="url(#faceMetal)" stroke="#4a0d20" stroke-width="3"/>
+  <path d="M 22 26 Q 48 18 74 26 Q 48 33 22 26 Z" fill="#ffffff" opacity="0.18"/>
+      <path d="M 31 58 Q 48 80 65 58 Q 48 68 31 58 Z" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+  <g class="frame f1">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="33" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="31.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="57" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="55.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+  <g class="frame f2">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="39" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="37.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="63" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="61.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+  <g class="frame f3">
+      <path d="M 29 44 Q 36 52 43 44" fill="none" stroke="#faf7f2" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 53 44 Q 60 52 67 44" fill="none" stroke="#faf7f2" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <g class="frame f4">
+      <ellipse cx="36" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="36" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="34.4" cy="46.2" r="1.5" fill="#ffffff"/>
+      <ellipse cx="60" cy="41" rx="7" ry="13" fill="#faf7f2" stroke="#4a0d20" stroke-width="2"/>
+      <circle cx="60" cy="48" r="4.6" fill="#1a1512"/>
+      <circle cx="58.4" cy="46.2" r="1.5" fill="#ffffff"/>
+  </g>
+</svg>
+ Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#facilities">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+<main><div class="section-inner"><header class="page-header"><p class="section-eyebrow">Open learning</p><h1 class="page-title">Learning Library</h1><p class="page-lede">Choose a path. Check what you need. Build from a first exercise toward a complete robot system.</p></header>
+<section class="learn-start" id="start-here" aria-labelledby="start-title"><h2 id="start-title">Start here</h2><ol><li>Choose a track below and read its setup requirements.</li><li>Check whether the exercise needs simulation, supplied data or physical lab equipment.</li><li>Follow the labs in order, keeping your work and checking the guide’s expected results.</li></ol><p>Guides are available to read without a lab account. Reading access does not provide equipment access, instructor support, course credit or permission to reuse every resource.</p></section>
+<nav class="learn-jumps" aria-label="Learning tracks">
+<a href="#simulation">Robot simulation</a>
+<a href="#articulated">Articulated robots</a>
+<a href="#twin">Wafer-cell digital twin</a>
+<a href="#iiot">IIoT workcell</a>
+<a href="#projects">RAS 545 project briefs</a>
+<a href="#resources">Resource index</a></nav>
+<section class="learn-track" id="simulation"><p class="section-eyebrow">Simulation</p><h2 class="section-title">Robot simulation</h2><p class="section-text">Start with a first physics scene, then control an arm and connect a mobile robot to ROS 2.</p><div class="learn-details"><div><h3>Before you start</h3><p>A working NVIDIA Isaac Sim 6.0.1 installation and NVIDIA driver are required by the guides. Lab 3 additionally requires Ubuntu, ROS 2 Humble, RViz2 and Nav2. Read each guide’s required files before starting.</p></div><div><h3>Where you can work</h3><p>No physical robot is needed for these simulation guides. A compatible computer and software setup are still required.</p></div></div><p class="learn-availability"><strong>Available:</strong> HTML guides. Some exercises refer to instructor-provided files; check the resource notes below.</p><ol class="learn-lessons">
+<li><a href="labs/isaac-sim-lab-1.html">Isaac Sim Basic Usage and First Physics Simulation</a></li>
+<li><a href="labs/isaac-sim-lab-2.html">UR5e Joint and TCP Control in Isaac Sim</a></li>
+<li><a href="labs/isaac-sim-lab-3.html">TurtleBot 3 ROS2 Integration, Sensors, Localization, and Navigation</a></li>
+</ol></section>
+<section class="learn-track" id="articulated"><p class="section-eyebrow">Physical robot</p><h2 class="section-title">Articulated robots</h2><p class="section-text">Move from manual operation and drawing to pick-and-place, camera sorting and kinematics.</p><div class="learn-details"><div><h3>Before you start</h3><p>Start with Lab 1. Its materials list includes a Dobot Magician Lite, a computer with DobotLab, USB/power connections and drawing supplies. Later labs introduce Python and camera work.</p></div><div><h3>Where you can work</h3><p>Read freely from anywhere. Completing the robot exercises requires the stated hardware and a safe, supervised work area.</p></div></div><p class="learn-availability"><strong>Available:</strong> HTML guides with their original source credits.</p><ol class="learn-lessons">
+<li><a href="labs/articulated-robot-lab-1.html">Robot Operation, Coordinate Recording, and Drawing</a></li>
+<li><a href="labs/articulated-robot-lab-2.html">Pick-and-Place with Suction and Gripper End Effectors</a></li>
+<li><a href="labs/articulated-robot-lab-3.html">Object Detection, Classification, and Sorting</a></li>
+<li><a href="labs/articulated-robot-lab-4.html">Forward and Inverse Kinematics</a></li>
+</ol></section>
+<section class="learn-track" id="twin"><p class="section-eyebrow">Simulation + live cell</p><h2 class="section-title">Wafer-cell digital twin</h2><p class="section-text">Read the introduction and safety reference first, then follow Labs 1–6 in order.</p><div class="learn-details"><div><h3>Before you start</h3><p>The introduction calls for basic Python and Linux. It contains the reference environment, ROS 2 Jazzy, Gazebo/Isaac Sim setup, a glossary and the read-only connection rules. Individual labs list their own requirements.</p></div><div><h3>Where you can work</h3><p>Some sections use recordings or desk tests; live validation uses the physical wafer cell. This is not a promise that every lab can be completed remotely. Never command the cell from the twin.</p></div></div><p class="learn-availability"><strong>Available:</strong> HTML guides, local PDF manuals, plus the author’s linked code and course-data release.</p><ol class="learn-lessons">
+<li><a href="labs/digital-twin-lab-0.html">Digital Twin Labs: Introduction, Safety and Reference</a></li>
+<li><a href="labs/digital-twin-lab-1.html">Lab 1: Reading the Cell: The Read-Only Bridge</a></li>
+<li><a href="labs/digital-twin-lab-2.html">Lab 2: Building the Live Digital Twin</a></li>
+<li><a href="labs/digital-twin-lab-3.html">Lab 3: Wafer Handling with Contact Physics</a></li>
+<li><a href="labs/digital-twin-lab-4.html">Lab 4: Vision Trained in Simulation</a></li>
+<li><a href="labs/digital-twin-lab-5.html">Lab 5: Fault Detection from Motion</a></li>
+<li><a href="labs/digital-twin-lab-6.html">Lab 6: Making the Real Cell Faster with the Twin</a></li>
+</ol></section>
+<section class="learn-track" id="iiot"><p class="section-eyebrow">Physical workcell · PDF guides</p><h2 class="section-title">IIoT workcell</h2><p class="section-text">Follow the cell build from power and network through both robots, sequencing and SCADA.</p><div class="learn-details"><div><h3>Before you start</h3><p>Begin with Lab 1’s power, safety and network guide. These guides use the physical workcell, PLC, robots and associated software. Each original PDF gives its own setup and equipment details.</p></div><div><h3>Where you can work</h3><p>The PDFs can be studied away from the lab. Building and operating the workcell requires the actual equipment, local safety procedures and supervision.</p></div></div><p class="learn-availability"><strong>Available:</strong> Short HTML entry pages and the author’s original downloadable PDF guides.</p><ol class="learn-lessons">
+<li><a href="labs/iiot-workcell-lab-1.html">Cell Power, Safety and Network</a></li>
+<li><a href="labs/iiot-workcell-lab-2.html">Dobot M1 Pro: Network, Teaching and Bridge</a></li>
+<li><a href="labs/iiot-workcell-lab-3.html">myCobot Pro 600: Network, Vacuum and Bridge</a></li>
+<li><a href="labs/iiot-workcell-lab-4.html">Conveyor, Sensors and Laser Station</a></li>
+<li><a href="labs/iiot-workcell-lab-5.html">Sequencer and Vision</a></li>
+<li><a href="labs/iiot-workcell-lab-6.html">SCADA Dashboard and Data Logging</a></li>
+</ol></section>
+<section class="learn-track" id="projects"><p class="section-eyebrow">Project briefs · physical systems</p><h2 class="section-title">RAS 545 project briefs</h2><p class="section-text">Explore camera-assisted tic-tac-toe, vision-guided maze solving and agentic manipulation.</p><div class="learn-details"><div><h3>Before you start</h3><p>Read each full brief for its system requirements and supplied files. These are course assessments, not a new externally graded course.</p></div><div><h3>Where you can work</h3><p>Read the briefs and inspect supplied materials freely. Physical execution requires suitable equipment and supervision; external access does not include course enrollment or assessment.</p></div></div><p class="learn-availability"><strong>Available:</strong> HTML briefs, assignment PDFs and the supplied maze starter-code archive.</p><ol class="learn-lessons">
+<li><a href="labs/ras-545-midterm-1-tic-tac-toe.html">Camera-Assisted Tic-Tac-Toe Robot</a></li>
+<li><a href="labs/ras-545-midterm-2-maze-solving.html">Vision-Guided 4 × 4 Maze Solving</a></li>
+<li><a href="labs/ras-545-final-project-physical-ai.html">Agentic Physical AI Manipulation</a></li>
+</ol></section>
+<section class="learn-track" id="resources"><p class="section-eyebrow">Read and download</p><h2 class="section-title">Resource index</h2><p>Local PDFs and starter files already supplied with these guides. Original author credits remain on each lab page.</p><ul class="learn-downloads">
+<li><a href="assets/labs/digital-twin-lab-0/pdf/WaferCell_DigitalTwin_LabManual_Full.pdf">Digital Twin Labs: Introduction, Safety and Reference</a><span>WaferCell_DigitalTwin_LabManual_Full.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-1/pdf/Lab1_ReadOnlyBridge.pdf">Lab 1: Reading the Cell: The Read-Only Bridge</a><span>Lab1_ReadOnlyBridge.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-2/pdf/Lab2_LiveTwin.pdf">Lab 2: Building the Live Digital Twin</a><span>Lab2_LiveTwin.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-3/pdf/Lab3_ContactPhysics.pdf">Lab 3: Wafer Handling with Contact Physics</a><span>Lab3_ContactPhysics.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-4/pdf/Lab4_SimVision.pdf">Lab 4: Vision Trained in Simulation</a><span>Lab4_SimVision.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-5/pdf/Lab5_FaultDetection.pdf">Lab 5: Fault Detection from Motion</a><span>Lab5_FaultDetection.pdf</span></li>
+<li><a href="assets/labs/digital-twin-lab-6/pdf/Lab6_CycleTime.pdf">Lab 6: Making the Real Cell Faster with the Twin</a><span>Lab6_CycleTime.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-1/lab1-cell-power-safety-network.pdf">Cell Power, Safety and Network</a><span>lab1-cell-power-safety-network.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-2/lab2-dobot-m1pro-network-teaching-bridge.pdf">Dobot M1 Pro: Network, Teaching and Bridge</a><span>lab2-dobot-m1pro-network-teaching-bridge.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-3/lab3-mycobot-pro600-network-vacuum-bridge.pdf">myCobot Pro 600: Network, Vacuum and Bridge</a><span>lab3-mycobot-pro600-network-vacuum-bridge.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-4/lab4-conveyor-sensors-laser.pdf">Conveyor, Sensors and Laser Station</a><span>lab4-conveyor-sensors-laser.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-5/lab5-sequencer-vision.pdf">Sequencer and Vision</a><span>lab5-sequencer-vision.pdf</span></li>
+<li><a href="assets/labs/iiot-workcell-lab-6/lab6-scada-logging.pdf">SCADA Dashboard and Data Logging</a><span>lab6-scada-logging.pdf</span></li>
+<li><a href="assets/labs/ras-545-midterm-1-tic-tac-toe/midterm-1-assignment.pdf">Camera-Assisted Tic-Tac-Toe Robot</a><span>midterm-1-assignment.pdf</span></li>
+<li><a href="assets/labs/ras-545-midterm-1-tic-tac-toe/midterm-1-specification.pdf">Camera-Assisted Tic-Tac-Toe Robot</a><span>midterm-1-specification.pdf</span></li>
+<li><a href="assets/labs/ras-545-midterm-2-maze-solving/midterm-2-maze-assignment.pdf">Vision-Guided 4 × 4 Maze Solving</a><span>midterm-2-maze-assignment.pdf</span></li>
+<li><a href="assets/labs/ras-545-midterm-2-maze-solving/midterm-2-starter-code.zip">Vision-Guided 4 × 4 Maze Solving</a><span>midterm-2-starter-code.zip</span></li>
+<li><a href="assets/labs/ras-545-final-project-physical-ai/final-project-assignment.pdf">Agentic Physical AI Manipulation</a><span>final-project-assignment.pdf</span></li>
+</ul><div class="learn-note"><h3>Resources to check before starting</h3><p>Isaac Sim Lab 2 refers to a controller module whose download reference is not yet resolved here. Lab 3 also refers to instructor-provided scene and map files. Check the guide and confirm you have those files before beginning; a link to a lesson does not mean every required input is included.</p><p>The digital-twin introduction links to the author’s code repository and course-data release. Those external resources retain their own terms and version requirements.</p></div></section>
+<section class="learn-track" id="planned"><p class="section-eyebrow">Not yet available</p><h2 class="section-title">Industrial automation guides in preparation</h2><p>The six planned industrial-automation guides in the <a href="labs.html#industrial-automation">original lab directory</a> remain in preparation. They are separate from the six supplied IIoT workcell PDFs above.</p></section>
+<section class="learn-track" id="reuse"><h2 class="section-title">Credits, reuse and safety</h2><p>Free reading access is not a blanket license to copy, adapt or redistribute. Keep the author credits and follow the terms attached to each resource. Where no reuse license is stated, seek permission from the relevant rights holder. Linked software, figures and manufacturer materials may have separate terms.</p><p>These guides describe specific equipment and reference environments. Do not infer compatibility with another setup. Follow each guide’s safety instructions and your institution’s local procedures before operating hardware.</p><p><a href="labs.html">Browse the original lab directory</a> · <a href="#start-here">Back to Start Here</a></p></section></div></main>  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+<p class="footer-small">&copy; 2026 Robotics Systems Instructional Lab</p>
+<p class="footer-small">Company and organization logos on this site are the property of their respective owners.</p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>
