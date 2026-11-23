@@ -86,7 +86,7 @@ if (yearSpan) {
    lab behind the hero text, gently changing from one to the next.
 
    HOW TO ADD THE PHOTOS (when Praj supplies them):
-     1. Put the image files in the assets/hero/ folder.
+     1. Put the image files in the assets/index/hero/ folder.
      2. List their file names in HERO_PHOTOS below, in the order they
         should appear, for example:
             const HERO_PHOTOS = ["lab-wide.jpg", "robot-cell.jpg"];
@@ -96,7 +96,7 @@ if (yearSpan) {
    keeps its plain blueprint-grid look.
    ------------------------------------------------------------------ */
 
-// The hero photos, as file names inside assets/hero/.
+// The hero photos, as file names inside assets/index/hero/.
 // First set selected from Praj's lab photo folder, 2026-10-30:
 // robot cells, machine tending, and the robotics hall.
 const HERO_PHOTOS = ["hero-fanuc-arm-student-wiring.jpg", "hero-plc-trainer-wiring.jpg", "hero-quadruped-robot-lab-floor.jpg", "hero-fanuc-arms-team.jpg"];
@@ -110,7 +110,7 @@ if (heroSection && heroBg && HERO_PHOTOS.length > 0) {
   // Put one <img> per photo into the photo layer.
   HERO_PHOTOS.forEach(function (fileName, index) {
     const img = document.createElement('img');
-    img.src = 'assets/hero/' + fileName;
+    img.src = 'assets/index/hero/' + fileName;
     img.alt = '';              /* decorative background; the hero text says it all */
     if (index === 0) {
       img.classList.add('is-active');  /* the first photo starts visible */

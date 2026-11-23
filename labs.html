@@ -162,7 +162,7 @@
       <!-- The Dobot Magician Lite teaching series. -->
 
         <h2 class="section-title" id="articulated-robot">Articulated robot labs</h2>
-        <img class="section-photo" src="assets/pages/lab-gripper-closeup.jpg" alt="Close-up of a student reaching toward a robot gripper on a lab bench">
+        <img class="section-photo" src="assets/labs/lab-gripper-closeup.jpg" alt="Close-up of a student reaching toward a robot gripper on a lab bench">
         <p class="photo-caption">Hands-on work with a robot gripper during a lab session.</p>
         <p class="section-text">
           A hands-on series on the Dobot Magician Lite desktop arm, written
@@ -266,6 +266,141 @@
         </div>
 
       <!--
+        WAFER-CELL DIGITAL TWIN LABS
+        A short course of seven pages (introduction plus six labs) on the
+        live, read-only digital twin of the wafer-handling cell. Written
+        and supplied by Jatin Satyam (email, 2026-11-23) for the site;
+        each page carries its own author and source credits in its header.
+        Added Nov 23, 2026 at Praj's request. Section photo: Jatin's
+        supplied photo of the wafer cell at the bench laptop.
+      -->
+
+        <h2 class="section-title" id="digital-twin">Wafer-cell digital twin labs</h2>
+        <img class="section-photo" src="assets/labs/wafer-cell-at-laptop.jpg" alt="A graduate student watching the wafer-handling cell from the twin laptop in the lab">
+        <p class="photo-caption">The wafer-handling cell that the digital twin follows, seen from the twin laptop.</p>
+        <p class="section-text">
+          A short course on building and using a live, read-only digital twin
+          of the lab's two-robot wafer-handling cell: the twin only reads the
+          cell, never commands it. Written by Jatin Satyam; start with the
+          introduction, then Labs 1 to 6 in order.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Start here</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-0/figures/intro_cell_overview.png" alt="Diagram of the wafer-handling cell: stations, robots and the path of one wafer"><h3 class="card-title">Introduction, safety and reference</h3>
+            <p class="card-text">The course overview, the cell, safety rules, network setup, and the reference appendices all six labs use.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-0.html">Open the introduction &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 1</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-1/figures/lab1_lab2_01_rqt_graph.png" alt="ROS 2 node graph of the read-only bridge publishing both robots' joint states"><h3 class="card-title">Reading the Cell: The Read-Only Bridge</h3>
+            <p class="card-text">Stream both robots' joint data into ROS 2 through a read-only bridge, and prove that nothing is ever written to the cell.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-1.html">Open Lab 1 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 2</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-2/figures/lab2_lab3_01_isaac_live_2026-11-18.png" alt="The live Isaac Sim twin following the real cell during a normal cycle"><h3 class="card-title">Building the Live Digital Twin</h3>
+            <p class="card-text">Stand up the live twin in Isaac Sim and Gazebo, driven by the cell's own telemetry.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-2.html">Open Lab 2 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 3</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-3/figures/lab3_lab4_run1_contact_sheet.jpg" alt="Rendered frames of the wafer handling physics replay"><h3 class="card-title">Wafer Handling with Contact Physics</h3>
+            <p class="card-text">Replay a real run with contact physics and check how close a wafer comes to sliding on the fork.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-3.html">Open Lab 3 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 4</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-4/figures/lab4_samples_synthetic_vs_real.png" alt="Synthetic training images compared with real camera crops from the cell"><h3 class="card-title">Vision Trained in Simulation</h3>
+            <p class="card-text">Train the wafer-inspection model on synthetic renders only, then run it on the cell's real camera.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-4.html">Open Lab 4 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 5</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-5/figures/lab5_stall_plot.png" alt="Plot of the twin detecting an injected robot stall against warning and alarm thresholds"><h3 class="card-title">Fault Detection from Motion</h3>
+            <p class="card-text">Watch robot motion alone and catch stalls and faults the way the twin's monitor does.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-5.html">Open Lab 5 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 6</p>
+            <img class="card-photo" src="assets/labs/digital-twin-lab-6/figures/lab6_lab6_gantt_before_after.png" alt="Cycle timeline of the real cell before and after the twin-guided change"><h3 class="card-title">Making the Real Cell Faster with the Twin</h3>
+            <p class="card-text">Use the twin to test a schedule change safely, then measure the shorter cycle on the real cell.</p>
+            <p class="card-link"><a href="labs/digital-twin-lab-6.html">Open Lab 6 &rarr;</a></p>
+          </article>
+        </div>
+
+      <!--
+        IIOT WORKCELL LABS
+        Six labs on the physical wafer-handling workcell itself: power and
+        network, both robots, conveyor and laser, the sequencer and vision,
+        and the SCADA dashboard. Written by Alonso Preciado Martinez and
+        sent to the lab by Dr. Sangram Redkar (email, 2026-11-23) to be
+        added here. Each page hosts the author's original PDF. Added
+        Nov 23, 2026 at Praj's request. These are the same cell the
+        digital-twin labs above observe.
+      -->
+
+        <h2 class="section-title" id="iiot-workcell">IIoT workcell labs</h2>
+        <p class="section-text">
+          Six labs on the physical wafer-handling workcell: build the power
+          and network foundation, teach both robots, integrate the conveyor
+          and laser station, run the full sequencer with vision, and operate
+          the cell from a SCADA dashboard. Written by Alonso Preciado
+          Martinez; each lab is the author's original guide as a PDF.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Lab 1</p>
+            <h3 class="card-title">Cell Power, Safety and Network</h3>
+            <p class="card-text">24 V power, an E-stop on the Micro850 PLC, and a first Modbus TCP exchange on the cell network.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-1.html">Open Lab 1 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 2</p>
+            <h3 class="card-title">Dobot M1 Pro: Network, Teaching and Bridge</h3>
+            <p class="card-text">Teach the M1 Pro its points and bridge PLC job registers to wafer moves.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-2.html">Open Lab 2 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 3</p>
+            <h3 class="card-title">myCobot Pro 600: Network, Vacuum and Bridge</h3>
+            <p class="card-text">PLC-switched vacuum, taught points, and rack placements through the same handshake.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-3.html">Open Lab 3 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 4</p>
+            <h3 class="card-title">Conveyor, Sensors and Laser Station</h3>
+            <p class="card-text">Carrier homing and positioning, reed switches, and the laser gantry bridge.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-4.html">Open Lab 4 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 5</p>
+            <h3 class="card-title">Sequencer and Vision</h3>
+            <p class="card-text">One PLC sequencer runs the whole cell, with the camera verdict and fault codes.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-5.html">Open Lab 5 &rarr;</a></p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Lab 6</p>
+            <h3 class="card-title">SCADA Dashboard and Data Logging</h3>
+            <p class="card-text">Operate the cell from an Ignition Perspective dashboard and log every run.</p>
+            <p class="card-link"><a href="labs/iiot-workcell-lab-6.html">Open Lab 6 &rarr;</a></p>
+          </article>
+        </div>
+
+      <!--
         RAS 545 ASSESSMENTS
         The two midterms and the final project of RAS 545: Robotics
         Systems I. Each card opens the full brief on this site (in the
@@ -288,21 +423,21 @@
         <div class="card-grid">
           <article class="card">
             <p class="card-tag">Midterm 1</p>
-            <img class="card-photo" src="assets/pages/tic-tac-toe.jpg" alt="A student seated at a lab workbench with a small desktop robot arm and a wired control panel"><h3 class="card-title">Camera-assisted tic-tac-toe robot</h3>
+            <img class="card-photo" src="assets/labs/tic-tac-toe.jpg" alt="A student seated at a lab workbench with a small desktop robot arm and a wired control panel"><h3 class="card-title">Camera-assisted tic-tac-toe robot</h3>
             <p class="card-text">Integrate robot drawing, camera-based board-state perception, game logic, and motion control to create a robotic tic-tac-toe opponent.</p>
             <p class="card-link"><a href="labs/ras-545-midterm-1-tic-tac-toe.html">Open the midterm brief &rarr;</a></p>
           </article>
 
           <article class="card">
             <p class="card-tag">Midterm 2</p>
-            <img class="card-photo" src="assets/pages/lab-bench-work.jpg" alt="Students working with desktop robot arms and a laptop at a lab bench"><h3 class="card-title">Vision-guided 4 &times; 4 maze solving</h3>
+            <img class="card-photo" src="assets/labs/lab-bench-work.jpg" alt="Students working with desktop robot arms and a laptop at a lab bench"><h3 class="card-title">Vision-guided 4 &times; 4 maze solving</h3>
             <p class="card-text">Transform a camera image of a 4 &times; 4 maze into a collision-free path and command the robot end effector to trace the solution.</p>
             <p class="card-link"><a href="labs/ras-545-midterm-2-maze-solving.html">Open the midterm brief &rarr;</a></p>
           </article>
 
           <article class="card">
             <p class="card-tag">Final project</p>
-            <img class="card-photo" src="assets/pages/llm-dobot.jpg" alt="A student working with a small desktop robot arm and control hardware on a lab bench"><h3 class="card-title">Agentic Physical AI manipulation</h3>
+            <img class="card-photo" src="assets/labs/llm-dobot.jpg" alt="A student working with a small desktop robot arm and control hardware on a lab bench"><h3 class="card-title">Agentic Physical AI manipulation</h3>
             <p class="card-text">Develop a manipulation system that interprets natural-language or spoken instructions through an LLM/VLM-based agent and executes context-aware physical tasks.</p>
             <p class="card-link"><a href="labs/ras-545-final-project-physical-ai.html">Open the project brief &rarr;</a></p>
           </article>

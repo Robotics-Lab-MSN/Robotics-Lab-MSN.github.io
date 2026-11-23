@@ -3,10 +3,13 @@
 ======================================================================
   PEOPLE PAGE (people.html)
 
-  Three groups, each in the same card shape:
+  Four groups, each in the same card shape:
     1. Faculty        - the faculty lead of the lab
     2. PhD researchers - doctoral researchers working in the lab
     3. Lab assistants  - the students who support courses and training
+    4. Graduate project contributors - graduate students whose project
+       work ships in or for the lab (added 2026-11-23 at Praj's request,
+       first card: Jatin Satyam, bio and photo supplied by him)
 
   Portraits come only from official ASU directory photos, the
   person's own portfolio portrait, person-supplied photos, or the
@@ -16,7 +19,7 @@
   Sources: search.asu.edu profiles 1114748 (Redkar) and 3467992
   (Tatwik), the author credits in this site's lab guides (Rajesh,
   Praj), prajvalarora.com, and each person's public LinkedIn profile
-  (linked on their card). Page photo: assets/pages/people.jpg.
+  (linked on their card). Page photo: assets/people/people.jpg.
   Do not name people in event photos without Praj's mapping.
 ======================================================================
 -->
@@ -129,7 +132,7 @@
         <h1 class="page-title">The people of the lab</h1>
         <p class="page-lede">The faculty member who leads the lab, the doctoral researchers working in it, and the lab assistants who support its courses and training.</p>
       </header>
-      <img class="section-photo" src="assets/pages/people-students-desktop-robot.jpg" alt="Students gathered around a laptop and a desktop robot arm in the lab">
+      <img class="section-photo" src="assets/people/people-students-desktop-robot.jpg" alt="Students gathered around a laptop and a desktop robot arm in the lab">
       <p class="photo-caption">Instruction in the lab.</p>
 
       <!-- FACULTY -->
@@ -300,10 +303,36 @@
           </ul>
           <p class="card-link"><a href="https://www.linkedin.com/in/sara-doyle-285458382">LinkedIn &rarr;</a></p>
         </article>
+      </div>
 
 
-
-
+      <!--
+        GRADUATE PROJECT CONTRIBUTORS
+        Graduate students whose project work ships in or for the lab.
+        Section added 2026-11-23 at Praj's request ("a section for
+        graduate guys - for people making projects"). Jatin's bio and
+        photo are his own, supplied by email for this page.
+      -->
+      <h2 class="section-title">Graduate project contributors</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img class="person-photo" src="assets/people/jatin-satyam.jpg" alt="Jatin Satyam smiling between two FANUC robot arms in the lab">
+          <p class="card-tag">Graduate project contributor</p>
+          <h3 class="card-title">Jatin Satyam</h3>
+          <p class="card-text">
+            Jatin Satyam is a graduate student at Arizona State University
+            working with Dr. Sangram Redkar. He built a live, read-only
+            digital twin of the lab's two-robot wafer-handling cell in
+            NVIDIA Isaac Sim and Gazebo, with vision trained only in
+            simulation, fault detection from robot motion, and a
+            twin-guided change that made the real cell 26% faster. He
+            also wrote the six hands-on digital-twin labs.
+          </p>
+          <ul class="card-list">
+            <li><a href="labs.html#digital-twin">Wafer-cell digital twin labs on this site</a></li>
+            <li><a href="https://github.com/JatinSatyam26/wafer-cell-digital-twin">Digital twin code (GitHub)</a></li>
+          </ul>
+        </article>
       </div>
 
     </div>
