@@ -30,10 +30,10 @@
     const item = document.createElement('li');
     const link = document.createElement('a');
     link.href = '#' + encodeURIComponent(heading.id);
-    link.textContent = heading.textContent.trim();
+    link.textContent = heading.innerText.replace(/\s+/g, ' ').trim();
     if (index === 0) link.setAttribute('aria-current', 'location');
     link.addEventListener('click', () => {
-      if (!wide.matches) panel.open = false;
+      if (!wide.matches || (document.body.classList.contains('home-page') && window.innerWidth <= 700)) panel.open = false;
       setCurrent(index);
     });
     item.appendChild(link); list.appendChild(item);
@@ -43,13 +43,21 @@
   document.body.classList.add('has-section-nav');
   const wide = window.matchMedia('(min-width: 1200px)');
   function sizePanel() {
-    panel.open = wide.matches;
-    if (wide.matches) document.body.appendChild(panel);
+    const home = document.body.classList.contains('home-page');
+    panel.open = home ? window.innerWidth > 700 : wide.matches;
+    if (home) main.querySelector('.home-intro').after(panel);
+    else if (wide.matches) document.body.appendChild(panel);
     else main.prepend(panel);
     const header = document.querySelector('.topbar');
     document.documentElement.style.setProperty('--sticky-header-height', (header ? header.getBoundingClientRect().height : 0) + 'px');
   }
-  wide.addEventListener('change', sizePanel); sizePanel();
+  wide.addEventListener('change', sizePanel);
+  window.matchMedia('(max-width: 700px)').addEventListener('change', sizePanel);
+  const pageHeader = document.querySelector('.topbar');
+  if (pageHeader && window.ResizeObserver) new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--sticky-header-height', pageHeader.getBoundingClientRect().height + 'px');
+  }).observe(pageHeader);
+  sizePanel();
   function setCurrent(index) {
     links.forEach((link, i) => {
       if (i === index) link.setAttribute('aria-current', 'location');

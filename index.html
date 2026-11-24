@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="home-page">
 
   <!--
     THE TOP BAR.
@@ -84,38 +84,21 @@
       THE HERO: the opening statement of the site.
       Keep it factual - this is the first thing a visitor reads.
     -->
-    <section class="hero" id="hero">
-      <!--
-        ROTATING PLACE PHOTOS (scaffold, waiting for Praj's pictures).
-        This empty div is where large background photographs of the lab
-        will fade from one to the next, like a company landing page.
-        js/main.js fills it from the HERO_PHOTOS list; while that list
-        is empty the hero keeps its plain blueprint-grid look and this
-        div stays invisible. Photos go in assets/index/hero/ when supplied.
-      -->
-      <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="hero-eyebrow">School of Manufacturing Systems and Networks &middot; Arizona State University</p>
-        <h1 class="hero-title">Robotics Systems Instructional Lab</h1>
-        <p class="hero-lede">
-          An instructional laboratory for robotics and automation in Room 231 of
-          ISTB 12 on ASU's Polytechnic campus, supporting the Robotics and
-          Autonomous Systems program with industrial robot arms, programmable
-          logic controllers, and simulation-based instruction.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#facilities">Explore the facilities</a>
-          <a class="button button-ghost" href="learning-library.html">Start learning</a>
-        </div>
+    <section class="home-intro" aria-labelledby="mission">
+      <div class="intro-copy">
+        <p class="section-eyebrow">Robotics / Automation / Education</p>
+        <h1 id="mission">Innovation<br>starts here<span>.</span></h1>
+        <p class="intro-mission">Turn ideas into working robotic systems through hands-on learning, careful testing and shared knowledge.</p>
+        <div class="intro-actions"><a class="button button-primary" href="learning-library.html">Start learning <span aria-hidden="true">↗</span></a><a class="text-link" href="#facilities">Explore the lab <span aria-hidden="true">→</span></a></div>
       </div>
+      <figure class="intro-visual"><img class="intro-photo" src="assets/index/hero/hero-fanuc-arm-student-wiring.jpg" alt="A student working beneath a yellow industrial robot arm in the lab"><img class="intro-art" src="assets/index/motion-study.svg" alt="" aria-hidden="true"><figcaption>Hands-on robotics at ASU's Polytechnic campus.</figcaption></figure>
+      <div class="intro-foot"><p>An instructional laboratory for robotics and automation in Room 231 of ISTB 12 on ASU's Polytechnic campus, supporting the Robotics and Autonomous Systems program with industrial robot arms, programmable logic controllers, and simulation-based instruction.</p><p class="ranking-note"><strong>Built in a culture of innovation.</strong> Arizona State University is No. 1 in U.S. News &amp; World Report's 2027 Most Innovative Schools ranking. <a href="https://news.asu.edu/20260921-university-news-asu-no-1-innovation-12th-year">ASU's announcement <span aria-hidden="true">↗</span></a></p></div>
     </section>
-
-    <section class="mission-band"><div class="section-inner"><figure class="robotics-art"><img src="assets/index/robotics-study.svg" alt="Original geometric artwork of a robot arm, joint arcs and a motion path in maroon and gold"><figcaption>Ideas in motion. An original geometric study, not an engineering drawing.</figcaption></figure><p class="section-eyebrow">Our mission</p><h2 id="mission">Innovation starts here.</h2><p class="mission-copy">Turn ideas into working robotic systems through hands-on learning, careful testing and shared knowledge.</p><p class="ranking-note">Arizona State University is No. 1 in U.S. News &amp; World Report's 2027 Most Innovative Schools ranking. <a href="https://news.asu.edu/20260921-university-news-asu-no-1-innovation-12th-year">Read ASU's announcement</a>.</p></div></section>
     <section class="route-panel" aria-labelledby="explore-title"><div class="section-inner"><p class="section-eyebrow">Explore the lab</p><h2 id="explore-title">From first principles to physical systems.</h2><div class="route-grid"><a href="learning-library.html"><span>01 / Learn</span><strong>Follow a learning path</strong><p>Requirements, ordered guides and supplied resources.</p></a><a href="labs/planar-arm-self-study.html"><span>02 / Try</span><strong>Start a self-study exercise</strong><p>Explore a two-link arm in your browser. No robot required.</p></a><a href="projects.html"><span>03 / Discover</span><strong>Explore student projects</strong><p>See the lab's robotics and automation work.</p></a></div></div></section>
     <!-- ABOUT: the lab introduction, shown first on the landing page. -->
     <section class="section" aria-label="About the lab">
       <div class="section-inner">
-      <h2 class="section-title" id="about">About the lab</h2>
+<div class="about-editorial"><div>      <h2 class="section-title" id="about">About the lab</h2>
         <p class="section-text">
           The Robotics Systems Instructional Lab is a teaching laboratory in the
           School of Manufacturing Systems and Networks, part of the Ira A. Fulton
@@ -131,7 +114,9 @@
           Robotics and Autonomous Systems degree programs.
         </p>
 
-        <!--
+</div><figure>        <img class="section-photo" src="assets/index/about-quadruped.jpg" alt="A quadruped robot walking across the lab floor">
+        <p class="photo-caption">Robots at work in the lab.</p>
+</figure></div><div class="leadership-editorial">        <!--
           LEADERSHIP. The lab's instruction and facilities are built
           through the leadership of Dr. Sangram Redkar - see the
           People page for his full profile.
@@ -148,8 +133,7 @@
         <img class="leader-photo" src="assets/index/sangram-redkar.jpg" alt="Portrait of Dr. Sangram Redkar">
         <p class="photo-caption">Dr. Sangram Redkar, the lab's faculty lead.</p>
 
-        <img class="section-photo" src="assets/index/about-quadruped.jpg" alt="A quadruped robot walking across the lab floor">
-        <p class="photo-caption">Robots at work in the lab.</p>
+</div>
       </div>
     </section>
 
