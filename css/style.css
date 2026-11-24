@@ -934,3 +934,7 @@ body {
 .hero .button-ghost { color:#fff; border-color:#fff; }
 .hero .hero-inner { padding-top:4.5rem; padding-bottom:4.5rem; }
 @media(max-width:650px) { .hero .hero-inner { padding-top:3rem; padding-bottom:3rem; } }
+/* Review-only wordmark: typographic lab identity, no external institutional seal. */
+.lab-wordmark { display:flex; flex-direction:column; justify-content:center; align-items:center; flex:0 0 50px; height:50px; color:var(--maroon); border-left:4px solid var(--gold); padding:0 8px; font-size:1.1rem; font-weight:850; letter-spacing:.02em; line-height:1.1; }
+.lab-wordmark span { font-size:.63rem; letter-spacing:.18em; margin-top:4px; }
+@media(max-width:650px) { .lab-wordmark { flex-basis:42px; height:44px; font-size:1rem; padding:0 6px; } }
