@@ -1,0 +1,15 @@
+TWO-LINK ARM: SELF-STUDY WORKSHEET
+Model: ideal planar arm. L1=L2=1 m. Angles in degrees, counterclockwise.
+q1 is measured from +x. q2 is relative to link 1, not the world.
+
+1. Predict x,y before running each pose: (0,0), (90,0), (0,90), (45,-90).
+2. Compare your calculation with the model. Record any discrepancy.
+3. Reach target (1,1). Find two different pairs of joint angles.
+4. Try target (2,2). Explain why it cannot be reached.
+5. Extension: change both link lengths to 0.5 m in a local copy of the model.
+   Predict the new maximum reach, then check your prediction.
+6. Explain two things this model leaves out about a real robot.
+
+Evidence: export one CSV for a successful target pose; keep your predictions,
+calculations, alternate solution and explanation of the unreachable target.
+Self-study only: no submission, grading or course credit is provided here.
