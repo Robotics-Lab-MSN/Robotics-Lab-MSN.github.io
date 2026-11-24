@@ -42,7 +42,13 @@
   nav.appendChild(list); panel.append(summary, nav); document.body.appendChild(panel);
   document.body.classList.add('has-section-nav');
   const wide = window.matchMedia('(min-width: 1200px)');
-  function sizePanel() { panel.open = wide.matches; }
+  function sizePanel() {
+    panel.open = wide.matches;
+    if (wide.matches) document.body.appendChild(panel);
+    else main.prepend(panel);
+    const header = document.querySelector('.topbar');
+    document.documentElement.style.setProperty('--sticky-header-height', (header ? header.getBoundingClientRect().height : 0) + 'px');
+  }
   wide.addEventListener('change', sizePanel); sizePanel();
   function setCurrent(index) {
     links.forEach((link, i) => {

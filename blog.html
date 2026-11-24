@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+======================================================================
+  INSTRUCTIONAL LABS PAGE (labs.html)
+
+  The guided laboratory series written for RAS 545: the NVIDIA Isaac
+  Sim labs, the articulated robot (Dobot) labs, and the industrial
+  automation labs. The full step-by-step guides live in the labs/
+  folder; the dashed cards are placeholders for guides the teaching
+  team is still writing. Moved from the home page when Praj asked
+  (Nov 1, 2026) for every top-bar link to open its own page.
+======================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - RAS Lab, ASU</title>
+  <meta name="description" content="Learning notes and practical explanations from the Robotics Systems Instructional Lab.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/learning-library/library.css">
+</head>
+
+<body>
+  <!-- Same top bar as every page. -->
+  <div class="university-strip">Arizona State University <span>School of Manufacturing Systems and Networks</span></div>
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="brand" href="index.html">
+        
+ Robotics Systems Instructional Lab
+      </a>
+      <button id="menu-button" class="menu-button" aria-label="Menu" aria-expanded="false">
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+          <span class="menu-button-line"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#facilities">Facilities</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="labs.html">Labs</a></li>
+          <li><a href="learning-library.html">Learning Library</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li><a class="nav-cta" href="visit.html">Visit</a></li>
+        </ul>
+    </nav>
+  </header>
+
+<main><div class="section-inner"><header class="page-header"><p class="section-eyebrow">Lab notebook</p><h1 class="page-title">Blog</h1><p class="page-lede">Ideas explained through robotics. Learning notes, model assumptions and questions worth testing.</p></header><article class="blog-entry"><p class="section-eyebrow">Learning note / robot geometry</p><h2 id="two-solutions">One target. Two ways to reach it.</h2><p class="blog-deck">A robot's end position does not always tell you how its joints are arranged. A two-link arm makes that visible.</p><div class="prose"><h3>Start with a prediction</h3><p>Imagine two 1 m links joined at an elbow, with the base at the origin. Point the first link along the positive x-axis and turn the second link 90 degrees counterclockwise. The end point is (1,1) m.</p><h3>Now change the joints, not the target</h3><p>Turn the first link 90 degrees from the x-axis and set the second joint to -90 degrees relative to the first link. The elbow moves, but the end point is still (1,1) m. Two joint configurations give the same end position.</p><h3>What this teaches</h3><p>Forward kinematics maps joint angles to an end position. Working backward from a position can produce more than one solution. A real robot also needs joint limits, collision checks and other constraints before a configuration can be considered usable.</p><h3>Try it</h3><p>Use the two-link model to compare (0°,90°) with (90°,-90°). Then set the target to (2,2) m. Its distance from the base exceeds the total link length, so no configuration can reach it.</p><p><a class="button button-primary" href="labs/planar-arm-self-study.html">Try the self-study exercise</a></p><p class="ranking-note">This is an original explanation of the supplied idealized geometry model, not a report of a physical robot experiment. The model omits dynamics, collisions and hardware limits.</p></div></article><section class="pilot-banner"><h2 id="reading-route">Keep learning</h2><p>Choose an ordered path in the Learning Library, check setup requirements and follow the supplied lab guides.</p><a href="learning-library.html">Explore learning tracks</a></section></div></main><script src="js/section-nav.js"></script>  <footer class="footer">
+    <div class="footer-inner">
+      <p>Robotics Systems Instructional Lab - Arizona State University</p>
+      <p class="footer-small">School of Manufacturing Systems and Networks, Ira A. Fulton Schools of Engineering &middot; <span id="year">2026</span></p>
+<p class="footer-small">&copy; 2026 Robotics Systems Instructional Lab</p>
+<p class="footer-small">Company and organization logos on this site are the property of their respective owners.</p>
+    </div>
+  </footer>
+
+  <!-- The one JavaScript file: menu button and footer year. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

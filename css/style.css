@@ -938,3 +938,56 @@ body {
 .lab-wordmark { display:flex; flex-direction:column; justify-content:center; align-items:center; flex:0 0 50px; height:50px; color:var(--maroon); border-left:4px solid var(--gold); padding:0 8px; font-size:1.1rem; font-weight:850; letter-spacing:.02em; line-height:1.1; }
 .lab-wordmark span { font-size:.63rem; letter-spacing:.18em; margin-top:4px; }
 @media(max-width:650px) { .lab-wordmark { flex-basis:42px; height:44px; font-size:1rem; padding:0 6px; } }
+/* Full-name identity and compact small-screen reading layout, review edition. */
+.brand { font-size:clamp(1.5rem,2.3vw,2rem); font-weight:850; letter-spacing:-.035em; line-height:1.15; padding:.2rem 0 .7rem; }
+@media(max-width:1199px) {
+ .section-nav { position:sticky; top:var(--sticky-header-height,90px); right:auto; bottom:auto; width:100%; border-left:0; border-right:0; border-top:3px solid var(--gold); z-index:9; margin:0 0 1rem; }
+ .section-nav summary { padding:.65rem 1.5rem; }
+ .section-nav nav { max-height:45vh; }
+ .has-section-nav .footer { padding-bottom:2rem; }
+}
+@media(max-width:1000px) {
+ .brand { max-width:calc(100vw - 110px); font-size:1.35rem; padding:0; }
+ .topbar-inner { gap:1rem; padding-top:1rem; }
+ .nav-links { max-height:65vh; overflow-y:auto; }
+ .hero .hero-inner { padding-top:2rem; padding-bottom:2.5rem; }
+}
+@media(max-width:650px) {
+ .university-strip { padding:.4rem 1.2rem; font-size:.72rem; }
+ .brand { font-size:1.3rem; }
+ .hero { min-height:0; }
+ .hero .hero-title { font-size:2.2rem; line-height:1.08; margin-bottom:1.2rem; }
+ .hero .hero-eyebrow { font-size:.72rem; line-height:1.5; margin-bottom:1rem; }
+ .hero .hero-lede { font-size:.97rem; line-height:1.65; }
+ .hero-actions { gap:.7rem; margin-top:1.3rem; }
+ .hero-actions .button { width:100%; text-align:center; }
+ .section,.route-panel { padding-top:2rem; padding-bottom:2rem; }
+ .page-header { margin-top:.5rem; padding-top:1.2rem; }
+ .page-title { font-size:2rem; line-height:1.15; }
+ .page-lede { font-size:1rem; }
+ .simulation-layout { gap:.8rem; }
+ .prose { padding-bottom:2rem; }
+}
+.mission-band { padding:3rem 0; border-bottom:1px solid var(--line); background:#fff; }
+.mission-band h2 { font-size:clamp(2rem,3.5vw,3.2rem); line-height:1.15; color:var(--maroon); letter-spacing:-.035em; }
+.mission-copy { font-size:1.25rem; max-width:48rem; margin:1.2rem 0; }
+.ranking-note { font-size:.85rem; color:var(--muted); max-width:50rem; }
+.ranking-note a { color:var(--maroon); }
+.blog-entry { padding:2rem 0; border-bottom:1px solid var(--line); }
+.blog-entry h2 { font-size:clamp(1.8rem,3vw,2.7rem); letter-spacing:-.03em; color:var(--maroon); }
+.blog-deck { font-size:1.2rem; max-width:48rem; margin:1rem 0 2rem; }
+@media(max-width:650px) { .mission-band { padding:2rem 0; } .mission-copy { font-size:1.05rem; } .hero .hero-inner { min-height:0; } }
+.robotics-art { margin:0 0 2rem; }
+.robotics-art img { display:block; width:100%; max-height:340px; object-fit:cover; }
+.robotics-art figcaption { color:var(--muted); font-size:.78rem; margin-top:.5rem; }
+@media(max-width:650px) { .hero { padding:0; } .hero .hero-inner { padding-top:2rem; padding-bottom:2rem; } .robotics-art img { min-height:150px; object-fit:cover; } }
+/* One centered page shell: content and masthead share their left inset. */
+@media(min-width:1200px) {
+ .has-section-nav main { max-width:1200px; margin-left:auto; margin-right:auto; padding-right:240px; }
+ .has-section-nav main .section-inner,.has-section-nav main .hero-inner { max-width:none; }
+ .section-nav { right:max(1.5rem,calc((100vw - 1152px)/2)); width:192px; }
+ .hero { padding-top:1.5rem; padding-bottom:1.5rem; min-height:0; }
+ .hero .hero-inner { padding-top:3rem; padding-bottom:3rem; }
+}
+.has-section-nav main [id] { scroll-margin-top:11rem; }
+@media(max-width:1199px) { .has-section-nav main [id] { scroll-margin-top:calc(var(--sticky-header-height,90px) + 65px); } }
