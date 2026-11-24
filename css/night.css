@@ -1,6 +1,6 @@
 /* One layout and type system, with two accessible color palettes. */
 :root{color-scheme:light;--paper:#fcfaf6;--card:#f3eee8;--ink:#291c22;--muted:#62545b;--line:#d4c5cb;--maroon:#801d40;--maroon-dark:#5b102b;--gold:#ffc627;--accent:#801d40;--link:#801d40;--opening:#f3eee8;--masthead:#fcfaf6;--strip:#eee7e3;--soft:#f0e8e9;--caption:#68555e;--footer:#eee7e3;--code:#f0e6df;--code-ink:#643416;--button:#801d40;--button-ink:#fff;--max-width:1280px;}
-:root[data-theme=dark]{color-scheme:dark;--paper:#2d101c;--card:#3c1427;--ink:#fffaf3;--muted:#d5c5cd;--line:#714253;--maroon:#ffc627;--maroon-dark:#ffda70;--accent:#ffc627;--link:#ffd451;--opening:#47132a;--masthead:#47132a;--strip:#230c17;--soft:#421b2c;--caption:#c6aeb9;--footer:#210c16;--code:#4a2334;--code-ink:#ffe4a3;--button:#ffc627;--button-ink:#28101a;}
+:root[data-theme=dark]{color-scheme:dark;--paper:#18191b;--card:#232427;--ink:#fffaf3;--muted:#d5c5cd;--line:#47484c;--maroon:#ffc627;--maroon-dark:#ffda70;--accent:#ffc627;--link:#ffd451;--opening:#202124;--masthead:#18191b;--strip:#111214;--soft:#292a2e;--caption:#bdb8b5;--footer:#111214;--code:#303034;--code-ink:#ffe4a3;--button:#ffc627;--button-ink:#28101a;}
 body{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;}
 a{color:var(--link);}a:hover{color:var(--ink);}
 .university-strip{background:var(--strip);color:var(--muted);border-top:3px solid var(--gold);padding:7px max(32px,calc((100vw - 1216px)/2));font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:43px;}
@@ -55,3 +55,37 @@ a{color:var(--link);}a:hover{color:var(--ink);}
 /* A full-size touch target without making the university strip taller. */
 .university-strip{padding-top:0;padding-bottom:0;}
 .theme-toggle{min-height:44px;border:0;border-left:1px solid var(--line);border-radius:0;padding:0 16px;}
+
+/* Full-width surfaces; one centered inset for reading, edge-to-edge photography. */
+:root{--reading-width:1184px;--page-inset:max(32px,calc((100vw - var(--reading-width))/2));}
+.has-section-nav main,.home-page.has-section-nav main{max-width:none;width:100%;padding:0;margin:0;}
+.topbar-inner,.section-inner,.footer-inner{max-width:none;width:100%;padding-left:var(--page-inset);padding-right:var(--page-inset);}
+.university-strip{padding-left:var(--page-inset);padding-right:var(--page-inset);}
+.home-intro{padding:0;}
+.intro-copy,.intro-foot{padding-left:var(--page-inset);padding-right:var(--page-inset);}
+.intro-copy{grid-template-columns:1.35fr 1fr;column-gap:80px;padding-top:56px;padding-bottom:48px;}
+.intro-copy h1{font-size:clamp(72px,7vw,104px);}
+.intro-detail{max-width:420px;}.intro-mission{font-size:19px;}
+.intro-photo{width:100%;aspect-ratio:auto;height:min(64vw,760px);object-fit:cover;object-position:50% 43%;}
+.intro-visual figcaption{padding-left:var(--page-inset);padding-right:var(--page-inset);}
+.intro-foot{gap:80px;padding-top:32px;padding-bottom:36px;}
+.section-nav,.home-page .section-nav{position:static;top:auto;right:auto;width:auto;margin:0;padding:0 var(--page-inset);background:var(--paper);border:0;border-bottom:1px solid var(--line);display:block;}
+.section-nav summary,.home-page .section-nav summary{padding:14px 0;font-size:12px;pointer-events:auto;list-style:disclosure-closed;list-style-position:inside;text-transform:none;letter-spacing:0;cursor:pointer;}
+.section-nav[open] summary{list-style:disclosure-open;}
+.section-nav nav{max-height:260px;padding:0 0 16px;}.section-nav ol{display:flex;flex-wrap:wrap;gap:8px 28px;}.section-nav a{padding:8px 0;border-left:0;}.section-nav a[aria-current]{border:0;}
+.home-page .section-nav{background:var(--opening);padding-top:0;padding-bottom:0;}
+.page-header{padding-top:48px;padding-bottom:36px;}.page-lede{max-width:56rem;}
+.prose{max-width:960px;}.section-text{max-width:960px;font-size:17px;line-height:1.8;}
+.home-page .about-editorial{display:block;}.home-page .about-editorial>div{max-width:900px;}.home-page .about-editorial .section-text{font-size:17px;line-height:1.8;}
+.home-page .about-editorial figure{margin:36px calc(-1 * var(--page-inset)) 0;}
+.home-page .about-editorial .section-photo{width:100%;max-height:none;height:min(61vw,720px);aspect-ratio:auto;object-position:50% 48%;}
+.home-page .about-editorial .photo-caption{padding:10px var(--page-inset);}
+.home-page #offers>.section-inner>.section-photo,.home-page #teaching>.section-inner>.section-photo{display:block;width:100vw;max-width:none;margin:32px calc(-1 * var(--page-inset));height:min(58vw,700px);max-height:none;object-fit:cover;object-position:50% 42%;}
+.home-page .section-title{font-size:36px;}.home-page .leadership-editorial{max-width:960px;margin-top:32px;}
+.home-page .section{padding:60px 0;}.home-page .card-grid{margin-top:32px;}
+@media(max-width:1000px){.intro-copy{gap:32px;}.intro-copy h1{font-size:76px;}.intro-mission{font-size:17px;}.intro-foot{gap:40px;}}
+@media(max-width:700px){:root{--page-inset:24px;}.intro-copy{padding-top:36px;padding-bottom:32px;}.intro-copy h1{font-size:58px;}.intro-mission{font-size:17px;}.intro-photo{height:auto;aspect-ratio:1/1;object-position:52% 48%;}.intro-foot{padding-top:24px;padding-bottom:24px;}.intro-visual figcaption{font-size:9px;}.home-page .section-title{font-size:29px;}.home-page .section{padding:42px 0;}.home-page .about-editorial .section-text{font-size:16px;}.home-page .about-editorial .section-photo{height:80vw;}.home-page #offers>.section-inner>.section-photo,.home-page #teaching>.section-inner>.section-photo{height:76vw;margin-top:24px;margin-bottom:24px;}.section-nav ol,.home-page .section-nav ol{display:block;}.section-nav a,.home-page .section-nav a{font-size:13px;padding:10px 0;}.page-header{padding-top:32px;}.section-text{font-size:16px;}}
+@media(max-width:360px){.intro-copy h1{font-size:49px;}}
+/* Full-bleed section photos use their containing width, avoiding scrollbar overflow. */
+.section-inner>.section-photo,.home-page #offers>.section-inner>.section-photo,.home-page section[aria-label="Teaching and facilities"]>.section-inner>.section-photo{display:block;width:calc(100% + 2 * var(--page-inset));max-width:none;margin:32px calc(-1 * var(--page-inset));height:min(58vw,700px);max-height:none;object-fit:cover;object-position:50% 42%;}
+@media(max-width:700px){.intro-photo{aspect-ratio:5/4;}.section-inner>.section-photo,.home-page #offers>.section-inner>.section-photo,.home-page section[aria-label="Teaching and facilities"]>.section-inner>.section-photo{height:76vw;margin-top:24px;margin-bottom:24px;}}
