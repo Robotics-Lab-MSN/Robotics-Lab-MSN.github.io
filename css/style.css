@@ -826,3 +826,34 @@ body {
 .section-inner h2[id] {
   scroll-margin-top: 5rem;  /* a little more than the top bar's height */
 }
+
+/* Per-page section links: a right rail on desktop, compact on smaller screens. */
+.section-nav {
+  position: fixed;
+  z-index: 40;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: min(20rem, calc(100vw - 2.5rem));
+  background: var(--paper, #faf8f5);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #00000012;
+  font-size: .88rem;
+}
+.section-nav summary { cursor: pointer; padding: .85rem 1rem; font-weight: 700; color: var(--maroon); }
+.section-nav nav { max-height: 48vh; overflow-y: auto; overscroll-behavior: contain; padding: 0 .5rem .6rem; }
+.section-nav ol { list-style: none; padding: 0; margin: 0; }
+.section-nav a { display: block; padding: .65rem .6rem; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; line-height: 1.4; overflow-wrap: anywhere; }
+.section-nav a:hover, .section-nav a[aria-current] { color: var(--maroon); background: #8c1d4009; border-left-color: var(--maroon); }
+.section-nav a:focus-visible, .section-nav summary:focus-visible { outline: 2px solid var(--maroon); outline-offset: 2px; }
+.has-section-nav main :is(h1,h2)[id] { scroll-margin-top: 7rem; }
+.has-section-nav .footer { padding-bottom: 6rem; }
+@media (min-width: 1200px) {
+  .has-section-nav main { padding-right: 250px; }
+  .section-nav { top: 7rem; bottom: auto; width: 210px; }
+  .section-nav nav { max-height: calc(100vh - 12rem); }
+  .section-nav summary { list-style: none; pointer-events: none; }
+  .section-nav summary::-webkit-details-marker { display: none; }
+  .has-section-nav .footer { padding-bottom: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
